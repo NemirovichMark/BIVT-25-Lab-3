@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Lab3
 {
@@ -39,15 +40,29 @@ namespace Lab3
 
             // code here
 
-            List<double> list = new List<double>();
-            for (int i = 0; i <= n; i++)
+            double x, y;
+            for (int i = 0; i < n; i++)
             {
-                double x = Convert.ToDouble(Console.ReadLine());
-                list.Add(x);
-                double y = Convert.ToDouble(Console.ReadLine());
-                list.Add(y);
-            }
+                x = Convert.ToDouble(Console.ReadLine());
+                y = Convert.ToDouble(Console.ReadLine());
 
+                if (x > 0 && y > 0)
+                {
+                    first++;
+                }
+                else if (x < 0 && y > 0)
+                {
+                    second++;
+                }
+                else if (x < 0 && y < 0)
+                {
+                    third++;
+                }
+                else
+                {
+                    fourth++;
+                }
+            }
 
             // end
 
@@ -59,6 +74,22 @@ namespace Lab3
 
             // code here
 
+            int mark1 = 0;
+            int mark2 = 0;
+            int mark3 = 0;
+            int mark4 = 0;
+            for (int i = 0; i < n; i++)
+            {
+                mark1 = Convert.ToInt32(Console.ReadLine());
+                mark2 = Convert.ToInt32(Console.ReadLine());
+                mark3 = Convert.ToInt32(Console.ReadLine());
+                mark4 = Convert.ToInt32(Console.ReadLine());
+                if (mark1 > 3 && mark2 > 3 && mark3 > 3 && mark4 > 3)
+                {
+                    count++;
+                }
+            }
+
             // end
 
             return count;
@@ -69,9 +100,29 @@ namespace Lab3
 
             // code here
 
-            // end
+            int seriasTime, taskTime = 10;
+            serias = 0;
+            if (time < 1440)
+            {
+                if (tasks > 0)
+                {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else
+                {
 
-            return (tasks, serias);
+                }
+            }
+            else
+            {
+                return (tasks, serias);
+            }
+
+                // end
+
+                return (tasks, serias);
         }
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
