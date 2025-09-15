@@ -1,4 +1,6 @@
-﻿namespace Lab3
+using System.Collections.Generic;
+
+namespace Lab3
 {
     public class Blue
     {
@@ -7,6 +9,25 @@
             double milk = 0;
 
             // code here
+
+            List<double> list = new List<double>();
+            for (int i = 0; i <= n; i++)
+            {
+                double kg = Convert.ToDouble(Console.ReadLine());
+                list.Add(kg);
+            }
+            
+            foreach (double kg in list)
+            {
+                if (kg < norma)
+                {
+                    milk += 2 * glass;
+                }
+                else
+                {
+                    milk += kg;
+                }
+            }
 
             // end
 
@@ -17,6 +38,16 @@
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
+
+            List<double> list = new List<double>();
+            for (int i = 0; i <= n; i++)
+            {
+                double x = Convert.ToDouble(Console.ReadLine());
+                list.Add(x);
+                double y = Convert.ToDouble(Console.ReadLine());
+                list.Add(y);
+            }
+
 
             // end
 
