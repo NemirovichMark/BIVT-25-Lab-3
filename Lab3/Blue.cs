@@ -102,7 +102,7 @@ namespace Lab3
 
             int seriasTime, taskTime = 10;
             serias = 0;
-            if (time < 1440)
+            while (time < 1440)
             {
                 if (tasks > 0)
                 {
@@ -112,17 +112,15 @@ namespace Lab3
                 }
                 else
                 {
-
+                    seriasTime = Convert.ToInt32(Console.ReadLine());
+                    time += seriasTime;
+                    serias++;
                 }
             }
-            else
-            {
-                return (tasks, serias);
-            }
 
-                // end
+            // end
 
-                return (tasks, serias);
+            return (tasks, serias);
         }
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
