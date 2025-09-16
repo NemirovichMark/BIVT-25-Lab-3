@@ -10,26 +10,16 @@ namespace Lab3
             double milk = 0;
 
             // code here
-
-            List<double> list = new List<double>();
-            for (int i = 0; i <= n; i++)
+       
+            for (int i = 0; i < n; i++)
             {
                 double kg = Convert.ToDouble(Console.ReadLine());
-                list.Add(kg);
-            }
-            
-            foreach (double kg in list)
-            {
                 if (kg < norma)
                 {
-                    milk += 2 * glass;
-                }
-                else
-                {
-                    milk += kg;
+                    milk += glass;
                 }
             }
-
+            milk = milk / 1000;
             // end
 
             return milk;
@@ -58,7 +48,7 @@ namespace Lab3
                 {
                     third++;
                 }
-                else
+                else if (x != 0 && y != 0)
                 {
                     fourth++;
                 }
@@ -126,6 +116,46 @@ namespace Lab3
         {
 
             // code here
+            if (number == 1)
+            {
+                power += 10;
+                intellect -= 5;
+            }
+            else if (number == 2)
+            {
+                agility += 5;
+                intellect -= 5;
+                power -=5;
+            }
+            else if (number == 3)
+            {
+                power += 10;
+                intellect -= 5;
+            }
+            else if (number == 4)
+            {
+                agility += 15;
+                power -= 10;
+                intellect -= 10;
+            }
+            else if (number == 5)
+            {
+                intellect += 7;
+                power -= 5;
+            }
+
+            if (power < 0)
+            {
+                power = 0;
+            }
+            if (intellect < 0)
+            {
+                intellect = 0;
+            }
+            if (agility < 0)
+            {
+                agility = 0;
+            }
 
             // end
 
