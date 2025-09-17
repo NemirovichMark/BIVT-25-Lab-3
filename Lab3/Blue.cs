@@ -7,7 +7,12 @@
             double milk = 0;
 
             // code here
-
+            int v = Convert.ToInt32(Console.ReadLine());
+            if (v < norma)
+            {
+                milk += glass;
+            }
+            milk += n * glass;
             // end
 
             return milk;
@@ -52,4 +57,5 @@
             return (power, agility, intellect);
         }
     }
+
 }
