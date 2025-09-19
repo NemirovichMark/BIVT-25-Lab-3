@@ -33,7 +33,7 @@ namespace Lab3
 	      int m2 = Convert.ToInt32(System.Console.ReadLine());
 	      int m3 = Convert.ToInt32(System.Console.ReadLine());
 	      int m4 = Convert.ToInt32(System.Console.ReadLine());
-	      if (Math.Min(m1, m2, m3, m4) == 2){
+	      if (Math.Min(Math.Min(m1, m2), Math.Min(m3, m4)) == 2){
 		count+=1;
 	      }
 	      average+=(m1+m2+m3+m4)/4;
