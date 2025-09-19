@@ -102,7 +102,7 @@ namespace Lab3
         }
         private static void TestBlue()
         {
-            // var blue = new Blue();
+             var blue = new Blue();
             // Console.WriteLine($"Task1 test 1 {blue.Task1(0, 200, 30) == 0}");
             // Console.WriteLine($"Task1 test 2. Paste 5 inputs");
             // Console.WriteLine($"Task1 test 2 {blue.Task1(5, 200, 30) == 0.6}");
