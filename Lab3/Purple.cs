@@ -28,6 +28,17 @@ namespace Lab3
             double average = 0;
 
             // code here
+	    for (int i = 0; i < n; ++i){
+	      int m1 = Convert.ToInt32(System.Console.ReadLine());
+	      int m2 = Convert.ToInt32(System.Console.ReadLine());
+	      int m3 = Convert.ToInt32(System.Console.ReadLine());
+	      int m4 = Convert.ToInt32(System.Console.ReadLine());
+	      if (Math.Min(m1, m2, m3, m4) == 2){
+		count+=1;
+	      }
+	      average+=(m1+m2+m3+m4)/4;
+	    }
+	    average /= n;
 
 
 
