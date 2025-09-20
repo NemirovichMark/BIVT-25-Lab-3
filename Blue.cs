@@ -37,11 +37,11 @@
                 {
                     second++;
                 }
-                else if (x < 0 && y < 0)
+                else if (x < 0 && y > 0)
                 {
                     third++;
                 }
-                else if (x > 0 && y < 0)
+                else
                 {
                     fourth++;   
                 }
@@ -61,7 +61,7 @@
                 int secondGrade = int.Parse(Console.ReadLine());
                 int thirdGrade = int.Parse(Console.ReadLine());
                 int fourthGrade = int.Parse(Console.ReadLine());
-                if (firstGrade > 3 && secondGrade > 3 && thirdGrade > 3 && fourthGrade > 3)
+                if (firstGrade > 3 || secondGrade > 3 || thirdGrade > 3 || fourthGrade > 3)
                 {
                     count++;
                 }
@@ -77,7 +77,7 @@
 
             // code here
             int seriasTime, taskTime = 10; 
-            while (time < 24 * 60)
+            while (time < 24.00)
             {
                 if (tasks > 0)
                 {
