@@ -1,4 +1,6 @@
-﻿namespace Lab3
+using System.Security.Cryptography;
+
+namespace Lab3
 {
     public class Blue
     {
@@ -7,7 +9,18 @@
             double milk = 0;
 
             // code here
+            int nenorma = 0;
+            int[] kg;
+            for (int i=1; i==n; i++)
+            {
+                kg.Append(int.Parse(Console.ReadLine()));
+                if (kg[kg.Length - 1] < norma)
+                {
+                    nenorma++;
+                }
+            }
 
+            milk = (nenorma + n) * glass / 1000;
             // end
 
             return milk;
@@ -27,7 +40,11 @@
             int count = 0;
 
             // code here
+            int[][] grades = new int[n][];
+            for (int i=0; i < n; i++)
+            {
 
+            }
             // end
 
             return count;
@@ -37,7 +54,25 @@
             int serias = 0;
 
             // code here
+            int seriasTime;
+            int taskTime = 10;
+            serias = 0;
+           while (time < 24)
+            {
+                if (tasks > 0)
+                {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
 
+                }
+                else
+                {
+                    seriasTime = int.Parse(Console.ReadLine());
+                    time += seriasTime;
+                    serias++;
+                }
+            }
             // end
 
             return (tasks, serias);
