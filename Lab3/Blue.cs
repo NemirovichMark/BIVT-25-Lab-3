@@ -7,14 +7,16 @@
             double milk = 0;
 
             // code here
-            double ves = Convert.ToDouble(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
+                double ves = Convert.ToDouble(Console.ReadLine());
                 if (ves < norma)
                 {
                     milk += glass;
                 }
             }
+
+            milk /= 1000;
             // end
 
             return milk;
@@ -63,13 +65,17 @@
                 for (int a = 0; a < 4; a++)
                 {
                    int x = Convert.ToInt32(Console.ReadLine());
-                   sum += x;
+                   if (x >= 4)
+                   {
+                       sum++;
+                   }
                 }
-                
-                if (sum >= 16)
+
+                if (sum == 4)
                 {
                     count++;
                 }
+
                 sum = 0;
             }
             // end
@@ -98,6 +104,7 @@
                     serias++;
                 }
             }
+            
             // end
 
             return (tasks, serias);
@@ -188,3 +195,4 @@
     }
 
 }
+
