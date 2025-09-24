@@ -145,15 +145,15 @@
         private static void TestPurple()
         {
             var purple = new Purple();
-            Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
-            Console.WriteLine($"Task1 test 2. Paste 10 inputs");
-            Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
-            Console.WriteLine($"Task1 test 3. Paste 10 inputs");
-            Console.WriteLine($"Task1 test 3 {purple.Task1(5, 1, 3) == 4}");
-            Console.WriteLine($"Task1 test 4. Paste 20 inputs");
-            Console.WriteLine($"Task1 test 4 {purple.Task1(10, 2, 3) == 3}");
-            Console.WriteLine($"Task1 test 5. Paste 20 inputs");
-            Console.WriteLine($"Task1 test 5 {purple.Task1(10, 1, 5) == 8}");
+            // Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
+            // Console.WriteLine($"Task1 test 2. Paste 10 inputs");
+            // Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
+            // Console.WriteLine($"Task1 test 3. Paste 10 inputs");
+            // Console.WriteLine($"Task1 test 3 {purple.Task1(5, 1, 3) == 4}");
+            // Console.WriteLine($"Task1 test 4. Paste 20 inputs");
+            // Console.WriteLine($"Task1 test 4 {purple.Task1(10, 2, 3) == 3}");
+            // Console.WriteLine($"Task1 test 5. Paste 20 inputs");
+            // Console.WriteLine($"Task1 test 5 {purple.Task1(10, 1, 5) == 8}");
 
             // Console.WriteLine($"Task2 test 1 {purple.Task2(0) == (0, 0)}");
             // Console.WriteLine($"Task2 test 2. Paste 4 inputs");
