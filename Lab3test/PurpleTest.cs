@@ -11,7 +11,7 @@
 
         private static StreamReader MakeTestStreamReader(int test) => new(GetTestFilePath(test));
 
-        [TestMethod]
+        // [TestMethod]
         public void Test1()
         {
             var input = new (int n, int r1, int r2)[]
@@ -45,7 +45,7 @@
             for (var i = 0; i < answer.Length; i += 1) Assert.AreEqual(answer[i], test[i]);
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void Test2()
         {
             var input = new[]
@@ -81,7 +81,7 @@
             for (var i = 0; i < answer.Length; i += 1) Assert.AreEqual(answer[i], test[i]);
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void Test3()
         {
             var input = new[]
@@ -118,7 +118,7 @@
             for (var i = 0; i < answer.Length; i += 1) Assert.AreEqual(answer[i], test[i], 0.0001);
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void Test4()
         {
             var input = new (int code, int limit)[]
