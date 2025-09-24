@@ -96,6 +96,58 @@ namespace Lab3
                     case 73:
                     case 72:
                     case 71:
+                    {
+                        {
+                            {
+                                {
+                                    {
+                                        {
+                                            {
+                                                {
+                                                    {
+                                                        {
+                                                            {
+                                                                {
+                                                                    {
+                                                                        {
+                                                                            {
+                                                                                {
+                                                                                    {
+                                                                                        {
+                                                                                            {
+                                                                                                {
+                                                                                                    {
+                                                                                                        {
+                                                                                                            {
+                                                                                                                {
+                                                                                                                    {
+                                                                                                                        {
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                         return 4;
 
                     case 70:
@@ -124,7 +176,45 @@ namespace Lab3
                         return 3;
 
                     default:
-                        return 2;
+                    {
+                        {
+                            {
+                                {
+                                    {
+                                        {
+                                            {
+                                                {
+                                                    {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                        return (
+                            (
+                                (
+                                    (
+                                        (
+                                            (
+                                                (
+                                                    (
+                                                        (
+                                                            (
+                                                                (
+                                                                    (
+                                                                        (
+                                                                            (
+                                                                                (
+                                                                                    (
+                                                                                        (
+                                                                                            (
+                                                                                                (
+                                                                                                    (
+                                                                                                        2))))))))))))))))))));
                 }
             }
 
@@ -189,7 +279,7 @@ namespace Lab3
                         return (kernelPanicLmao, currentAttemp);
 
                     if (readedCode == code)
-                        return (accessAccept,currentAttemp);
+                        return (accessAccept, currentAttemp);
 
 
                     currentAttemp += 1;
@@ -210,6 +300,73 @@ namespace Lab3
             double luck = 0;
 
             // code here
+
+            const int enum_class_MyC00l_Enumerator_t__EnergyPeakLmao = -0x7FE_AAA_0F;
+            const int enum_class_MyC00l_Enumerator_t__DarkForces = 0x0_A_00_AA_0_0;
+            const int enum_class_MyC00l_Enumerator_t__PlusFive = 0x7_A_0_A_0_A_0_A;
+            const int enum_class_MyC00l_Enumerator_t__MythicChanceBtw = 0x00_FF_1234;
+
+            static double MatchLuckModifier(int x)
+            {
+                return x switch
+                {
+                    1 or 8 or 15 or 22 or 29 => enum_class_MyC00l_Enumerator_t__EnergyPeakLmao,
+                    4 or 11 or 18 or 25 => enum_class_MyC00l_Enumerator_t__DarkForces,
+                    7 or 14 or 21 or 28 => enum_class_MyC00l_Enumerator_t__MythicChanceBtw,
+                    _ => enum_class_MyC00l_Enumerator_t__PlusFive,
+                };
+            }
+
+            var aLast = a + n;
+
+            for (var i = a; i < aLast; i += 1)
+            {
+                switch (MatchLuckModifier(i))
+                {
+                    case enum_class_MyC00l_Enumerator_t__EnergyPeakLmao:
+                        luck *= 1.5;
+                        goto i_use_goto_btw____SanitaseProcedure;
+
+                    case enum_class_MyC00l_Enumerator_t__DarkForces:
+                        luck -= 10.0;
+                        goto i_use_goto_btw____SanitaseProcedure;
+
+                    case enum_class_MyC00l_Enumerator_t__MythicChanceBtw:
+                    {
+                        if (luck < 50.0)
+                        {
+                            {
+                                {
+                                    {
+                                        {
+                                            {
+                                                {
+                                                    luck = 55.0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                        goto i_use_goto_btw____SanitaseProcedure;
+
+
+                    default:
+                    {
+                        {
+                            luck += 5.0;
+                        }
+                    }
+                        goto i_use_goto_btw____SanitaseProcedure;
+                }
+
+                i_use_goto_btw____SanitaseProcedure:
+                {
+                    luck = Math.Clamp(luck, 0.0, 100.0);
+                }
+            }
 
             // end
 
