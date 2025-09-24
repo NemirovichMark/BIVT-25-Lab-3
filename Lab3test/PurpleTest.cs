@@ -3,8 +3,13 @@
     [TestClass]
     public sealed class PurpleTest
     {
-        Lab3.Purple _main = new Lab3.Purple();
-        private const double E = 0.0001;
+        private readonly Lab3.Purple _main = new();
+
+
+        private static string GetTestFilePath(int test) =>
+            Path.Combine("/home/kiraflux/Documents/Misis-Prog/BIVT-25-Lab-3/Lab3test/", $"purple-task-{test}");
+
+        private static StreamReader MakeTestStreamReader(int test) => new(GetTestFilePath(test));
 
         [TestMethod]
         public void Test1()
@@ -31,12 +36,8 @@
 
             for (var i = 0; i < test.Length; i += 1)
             {
-                using var stream = new StreamReader(
-                    "/home/kiraflux/Documents/Misis-Prog/BIVT-25-Lab-3/Lab3test/purple-task-1"
-                );
-
+                using var stream = MakeTestStreamReader(1);
                 Console.SetIn(stream);
-
                 var (n, r1, r2) = input[i];
                 test[i] = _main.Task1(n, r1, r2);
             }
@@ -69,9 +70,7 @@
 
             for (var i = 0; i < test.Length; i += 1)
             {
-                using var stream = new StreamReader(
-                    "/home/kiraflux/Documents/Misis-Prog/BIVT-25-Lab-3/Lab3test/purple-task-2"
-                );
+                using var stream = MakeTestStreamReader(2);
 
                 Console.SetIn(stream);
 
@@ -107,9 +106,7 @@
 
             for (var i = 0; i < test.Length; i += 1)
             {
-                using var stream = new StreamReader(
-                    "/home/kiraflux/Documents/Misis-Prog/BIVT-25-Lab-3/Lab3test/purple-task-3"
-                );
+                using var stream = MakeTestStreamReader(3);
 
                 Console.SetIn(stream);
 
@@ -152,10 +149,7 @@
 
             for (var i = 0; i < test.Length; i += 1)
             {
-                using var stream = new StreamReader(
-                    "/home/kiraflux/Documents/Misis-Prog/BIVT-25-Lab-3/Lab3test/purple-task-4"
-                );
-
+                using var stream = MakeTestStreamReader(4);
                 Console.SetIn(stream);
 
                 var (code, limit) = input[i];
