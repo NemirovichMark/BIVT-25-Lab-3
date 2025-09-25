@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace Lab3
+﻿namespace Lab3
 {
     public class Program
     {
@@ -16,7 +14,7 @@ namespace Lab3
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
             // Console.WriteLine("\nTest purple league\n");
-            // TestPurple();
+            TestPurple();
         }
         private static void TestWhite()
         {
@@ -146,7 +144,7 @@ namespace Lab3
         }
         private static void TestPurple()
         {
-            // var purple = new Purple();
+            var purple = new Purple();
             // Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
             // Console.WriteLine($"Task1 test 2. Paste 10 inputs");
             // Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
