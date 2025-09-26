@@ -1,5 +1,3 @@
-
-
 namespace Lab3
 {
     public class Blue
@@ -152,5 +150,3 @@ namespace Lab3
         }
     }
 }
-
-
