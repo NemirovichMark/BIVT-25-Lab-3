@@ -99,7 +99,21 @@
         {
 
             // code here
+            switch (number)
+            {
+                case 1: case 3:
+                    power += 10;
+                    break;
+                case 2:
+                    agility += 5;
+                    break;
+                case 4:
 
+
+                    break;
+                default:
+                    break;
+            }
             // end
 
             return (power, agility, intellect);
