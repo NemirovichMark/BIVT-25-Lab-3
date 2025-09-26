@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Lab3
 {
@@ -9,7 +9,12 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                int.TryParse(Console.ReadLine(), out int height);
+                // типа решение
+            }
+            Console.WriteLine("My answer " + averageHeight);
             // end
 
             return averageHeight;
@@ -19,7 +24,12 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out double time);
+                Console.WriteLine("The time is " + time);
+                // типа решение
+            }
             // end
 
             return bestResult;
