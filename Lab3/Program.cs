@@ -6,8 +6,8 @@ namespace Lab3
     {
         public static void Main()
         {
-            // CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-            // CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
             // Console.WriteLine("\nTest white league\n");
             // TestWhite();
@@ -15,8 +15,8 @@ namespace Lab3
             // TestGreen();
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
-            // Console.WriteLine("\nTest purple league\n");
-            // TestPurple();
+            Console.WriteLine("\nTest purple league\n");
+            TestPurple();
         }
         private static void TestWhite()
         {
@@ -146,26 +146,26 @@ namespace Lab3
         }
         private static void TestPurple()
         {
-            // var purple = new Purple();
-            // Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
-            // Console.WriteLine($"Task1 test 2. Paste 10 inputs");
-            // Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
-            // Console.WriteLine($"Task1 test 3. Paste 10 inputs");
-            // Console.WriteLine($"Task1 test 3 {purple.Task1(5, 1, 3) == 4}");
-            // Console.WriteLine($"Task1 test 4. Paste 20 inputs");
-            // Console.WriteLine($"Task1 test 4 {purple.Task1(10, 2, 3) == 3}");
-            // Console.WriteLine($"Task1 test 5. Paste 20 inputs");
-            // Console.WriteLine($"Task1 test 5 {purple.Task1(10, 1, 5) == 8}");
+            var purple = new Purple();
+            Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
+            Console.WriteLine($"Task1 test 2. Paste 10 inputs");
+            Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
+            Console.WriteLine($"Task1 test 3. Paste 10 inputs");
+            Console.WriteLine($"Task1 test 3 {purple.Task1(5, 1, 3) == 4}");
+            Console.WriteLine($"Task1 test 4. Paste 20 inputs");
+            Console.WriteLine($"Task1 test 4 {purple.Task1(10, 2, 3) == 3}");
+            Console.WriteLine($"Task1 test 5. Paste 20 inputs");
+            Console.WriteLine($"Task1 test 5 {purple.Task1(10, 1, 5) == 8}");
 
-            // Console.WriteLine($"Task2 test 1 {purple.Task2(0) == (0, 0)}");
-            // Console.WriteLine($"Task2 test 2. Paste 4 inputs");
-            // Console.WriteLine($"Task2 test 2 {purple.Task2(1) == (1, 2.75)}");
-            // Console.WriteLine($"Task2 test 3. Paste 8 inputs");
-            // Console.WriteLine($"Task2 test 3 {purple.Task2(2) == (1, 3.75)}");
-            // Console.WriteLine($"Task2 test 4. Paste 20 inputs");
-            // Console.WriteLine($"Task2 test 4 {purple.Task2(5) == (2, 4.05)}");
-            // Console.WriteLine($"Task2 test 5. Paste 40 inputs");
-            // Console.WriteLine($"Task2 test 5 {purple.Task2(10) == (3, 3.925)}");
+            //Console.WriteLine($"Task2 test 1 {purple.Task2(0) == (0, 0)}");
+            //Console.WriteLine($"Task2 test 2. Paste 4 inputs");
+            //Console.WriteLine($"Task2 test 2 {purple.Task2(1) == (1, 2.75)}");
+            //Console.WriteLine($"Task2 test 3. Paste 8 inputs");
+            //Console.WriteLine($"Task2 test 3 {purple.Task2(2) == (1, 3.75)}");
+            //Console.WriteLine($"Task2 test 4. Paste 20 inputs");
+            //Console.WriteLine($"Task2 test 4 {purple.Task2(5) == (2, 4.05)}");
+            //Console.WriteLine($"Task2 test 5. Paste 40 inputs");
+            //Console.WriteLine($"Task2 test 5 {purple.Task2(10) == (3, 3.925)}");
 
             // Console.WriteLine($"Task3 test 1 {purple.Task3(0) == 0}");
             // Console.WriteLine($"Task3 test 2. Paste 2 inputs");
