@@ -46,16 +46,24 @@
             int count = 0;
 
             // code here
-            for (int i = 0; i < n; i++)
+            int k = 0;
+            int score = 0;
+            bool deb = true;
+            for (int i = 0; i < n * 4; i++)
             {
-                int score = 0;
-                bool deb = true;
-                for (int k = 0; k < 4; k++)
+                while (int.TryParse(Console.ReadLine(), out score) != true) ;
+                k++;
+                if (score == 2 || score == 3) deb = false;
+                if (k == 4 && deb == true)
                 {
-                    while (int.TryParse(Console.ReadLine(), out score) != true) ;
-                    if (score == 2 || score == 3) deb = false;
+                    count += Convert.ToInt16(deb);
+                    k = 0;
                 }
-                count += Convert.ToInt16(deb);
+                else if (k == 4 && deb == false)
+                {
+                    k = 0;
+                    deb = true;
+                }       
             }
             // end
 
@@ -66,7 +74,23 @@
             int serias = 0;
 
             // code here
-
+            int taskTime = 10;
+            int seriasTime;
+            while (time < 24*60)
+            {
+                if (tasks > 0)
+                {
+                    time+=taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else
+                {
+                    while (int.TryParse(Console.ReadLine(), out seriasTime) != true);
+                    time += seriasTime;
+                    serias++;
+                }
+            }
             // end
 
             return (tasks, serias);
