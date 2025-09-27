@@ -103,17 +103,28 @@
             {
                 case 1: case 3:
                     power += 10;
+                    intellect -= 5;
                     break;
                 case 2:
                     agility += 5;
+                    intellect -= 5;
+                    power -= 5;
                     break;
                 case 4:
-
-
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+                case 5:
+                    intellect += 7;
+                    power -= 5;
                     break;
                 default:
                     break;
             }
+            intellect = Math.Max(0, intellect);
+            agility = Math.Max(0, agility);
+            power = Math.Max(0, power);
             // end
 
             return (power, agility, intellect);

@@ -133,16 +133,18 @@ namespace Lab3
             //Console.WriteLine($"Task3 test 5. Paste 40 inputs");
             //Console.WriteLine($"Task3 test 5 {blue.Task3(10) == 4}");
 
-            Console.WriteLine($"Task4 test 1. Insert input until the task completes");
-            Console.WriteLine($"Task4 test 1 {blue.Task4(0, 0) == (0, 12)}");
-            Console.WriteLine($"Task4 test 2. Insert input until the task completes");
-            Console.WriteLine($"Task4 test 2 {blue.Task4(700, 0) == (0, 7)}");
-            Console.WriteLine($"Task4 test 3. Insert input until the task completes");
-            Console.WriteLine($"Task4 test 3 {blue.Task4(0, 22) == (0, 1)}");
-            Console.WriteLine($"Task4 test 4. Insert input until the task completes");
-            Console.WriteLine($"Task4 test 4 {blue.Task4(100, 10) == (0, 9)}");
-            Console.WriteLine($"Task4 test 5. Insert input until the task completes");
-            Console.WriteLine($"Task4 test 5 {blue.Task4(0, 35) == (12, 0)}");
+            //Console.WriteLine($"Task4 test 1. Insert input until the task completes");
+            //Console.WriteLine($"Task4 test 1 {blue.Task4(0, 0) == (0, 12)}");
+            //Console.WriteLine($"Task4 test 2. Insert input until the task completes");
+            //Console.WriteLine($"Task4 test 2 {blue.Task4(700, 0) == (0, 7)}");
+            //Console.WriteLine($"Task4 test 3. Insert input until the task completes");
+            //Console.WriteLine($"Task4 test 3 {blue.Task4(0, 22) == (0, 1)}");
+            //Console.WriteLine($"Task4 test 4. Insert input until the task completes");
+            //Console.WriteLine($"Task4 test 4 {blue.Task4(100, 10) == (0, 9)}");
+            //Console.WriteLine($"Task4 test 5. Insert input until the task completes");
+            //Console.WriteLine($"Task4 test 5 {blue.Task4(0, 35) == (12, 0)}");
+
+            Console.WriteLine(blue.Task5(2, 2, 2, 2));
         }
         private static void TestPurple()
         {
