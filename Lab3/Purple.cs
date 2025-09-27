@@ -6,7 +6,7 @@ namespace Lab3
     {
         public int Task1(int n, int r1, int r2)
         {
-            int answer = 0;
+            int count = 0;
 
             for (int i = 0; i < n; i++)
             {
@@ -14,11 +14,11 @@ namespace Lab3
                 double y = double.Parse(Console.ReadLine());
                 if ((Math.Sqrt(x * x + y * y) >= r1) && (Math.Sqrt(x * x + y * y) <= r2))
                 {
-                    answer++;
+                    count++;
                 }
             }
 
-            return answer;
+            return count;
         }
         public (int count, double average) Task2(int n)
         {
@@ -96,7 +96,7 @@ namespace Lab3
         }
         public (string solution, int attempts) Task4(int code, int limit)
         {
-            string solution = "";
+            string solution = "Код не подобран";
             int attempts = 0;
             
             while (attempts < limit)
