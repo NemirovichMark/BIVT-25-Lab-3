@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace Lab3
 {
     public class Green
@@ -114,3 +112,4 @@ namespace Lab3
         }
     }
 }
+
