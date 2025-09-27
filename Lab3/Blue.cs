@@ -1,3 +1,4 @@
+using System.Diagnostics.Metrics;
 using System.Security.Cryptography;
 
 namespace Lab3
@@ -10,17 +11,20 @@ namespace Lab3
 
             // code here
             int nenorma = 0;
-            int[] kg;
-            for (int i=1; i==n; i++)
+            double kg = 0;
+            for (int i=0; i<n; i++)
             {
-                kg.Append(int.Parse(Console.ReadLine()));
-                if (kg[kg.Length - 1] < norma)
+                kg=(double.Parse(Console.ReadLine()));
+                if (kg < norma)
                 {
                     nenorma++;
                 }
             }
 
-            milk = (nenorma + n) * glass / 1000;
+            milk = ((double)(nenorma  * glass) / 1000);
+            Console.WriteLine(nenorma);
+            Console.WriteLine(milk);
+
             // end
 
             return milk;
@@ -30,7 +34,28 @@ namespace Lab3
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
+            for (int i = 0; i < n; i++)
+            {
+                double x = (double.Parse(Console.ReadLine()));
+                double y = (double.Parse(Console.ReadLine()));
+                if ((x>0) && (y > 0))
+                {
+                    first++;
+                }
+                else if((x < 0) && (y > 0))
+                {
+                    second++;
+                }
+                else if((x < 0) && (y < 0))
+                {
+                    third++;
+                }
+                else if ((x > 0) && (y < 0))
+                {
+                    fourth++;
+                }
 
+            }
             // end
 
             return (first, second, third, fourth);
@@ -38,12 +63,24 @@ namespace Lab3
         public int Task3(int n)
         {
             int count = 0;
-
+            int g1;
+            int g2;
+            int g3;
+            int g4;
             // code here
-            int[][] grades = new int[n][];
             for (int i=0; i < n; i++)
             {
-
+                g1 = int.Parse(Console.ReadLine());
+                g2 = int.Parse(Console.ReadLine());
+                g3 = int.Parse(Console.ReadLine());
+                g4 = int.Parse(Console.ReadLine());
+                if ((g1 != 2) && (g2 != 2) && (g3 != 2) && (g4 != 2))
+                {
+                    if ((g1 != 3) && (g2 != 3) && (g3 != 3) && (g4 != 3))
+                    {
+                        count++;
+                    }
+                }
             }
             // end
 
@@ -57,7 +94,7 @@ namespace Lab3
             int seriasTime;
             int taskTime = 10;
             serias = 0;
-           while (time < 24)
+           while (time < 1440)
             {
                 if (tasks > 0)
                 {
@@ -81,6 +118,31 @@ namespace Lab3
         {
 
             // code here
+            switch (number)
+            {
+                case 1:
+                    power += 10;
+                    intellect = Math.Max(0, intellect - 5);
+                    break;
+                case 2:
+                    agility += 5;
+                    power = Math.Max(0, power - 5);
+                    intellect = Math.Max(0, intellect - 5);
+                    break;
+                case 3:
+                    power += 10;
+                    intellect = Math.Max(0, intellect - 5);
+                    break;
+                case 4:
+                    agility += 15;
+                    power = Math.Max(0, power - 10);
+                    intellect = Math.Max(0, intellect - 10);
+                    break;
+                case 5:
+                    intellect += 7;
+                    power = Math.Max(0, power - 5);
+                    break;
+            }
 
             // end
 
@@ -88,6 +150,3 @@ namespace Lab3
         }
     }
 }
-
-
-
