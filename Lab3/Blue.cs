@@ -119,11 +119,13 @@
                 case 2:
                     agility += 5;
                     power -= 5;
+                    intellect -= 5;
+                    if (intellect < 0) { intellect = 0; }
                     if (power < 0) { power = 0; }
                     break;
                 case 3:
                     power += 10;
-                    intellect -= 3;
+                    intellect -= 5;
                     if (intellect < 0) { intellect = 0; }
                     break;
                 case 4:
@@ -146,3 +148,4 @@
     }
 
 }
+
