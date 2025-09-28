@@ -7,7 +7,13 @@
             double milk = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                double weight = double.Parse(Console.ReadLine());
+                if (weight < norma)
+                    milk += glass;
+            }
+            milk /= 1000;
             // end
 
             return milk;

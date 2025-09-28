@@ -11,12 +11,12 @@ namespace Lab3
 
             // Console.WriteLine("\nTest white league\n");
             // TestWhite();
-            Console.WriteLine("\nTest green league\n");
-            TestGreen();
+            // Console.WriteLine("\nTest green league\n");
+            // TestGreen();
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
-            // Console.WriteLine("\nTest purple league\n");
-            // TestPurple();
+            Console.WriteLine("\nTest purple league\n");
+            TestPurple();
         }
         private static void TestWhite()
         {
@@ -89,20 +89,20 @@ namespace Lab3
             // Console.WriteLine($"Task3 test 1 {green.Task3() == 2}");
             // Console.WriteLine($"Task3 test 2. Insert input until the task completes (second set)");
             // Console.WriteLine($"Task3 test 2 {green.Task3() == 2}");
-
-            Console.WriteLine($"Task4 test 1 {green.Task4(0, 0) == 0}");
-            Console.WriteLine($"Task4 test 2. Paste 5 inputs");
-            Console.WriteLine($"Task4 test 2 {green.Task4(5, 0) == 16}");
-            Console.WriteLine($"Task4 test 3. Paste 5 inputs");
-            Console.WriteLine($"Task4 test 3 {green.Task4(0, 5) == 64}");
-            Console.WriteLine($"Task4 test 4. Paste 10 inputs");
-            Console.WriteLine($"Task4 test 4 {green.Task4(5, 5) == 84}");
-            Console.WriteLine($"Task4 test 5. Paste 12 inputs");
-            Console.WriteLine($"Task4 test 5 {green.Task4(10, 2) == 61}");
+            //
+            // Console.WriteLine($"Task4 test 1 {green.Task4(0, 0) == 0}");
+            // Console.WriteLine($"Task4 test 2. Paste 5 inputs");
+            // Console.WriteLine($"Task4 test 2 {green.Task4(5, 0) == 16}");
+            // Console.WriteLine($"Task4 test 3. Paste 5 inputs");
+            // Console.WriteLine($"Task4 test 3 {green.Task4(0, 5) == 64}");
+            // Console.WriteLine($"Task4 test 4. Paste 10 inputs");
+            // Console.WriteLine($"Task4 test 4 {green.Task4(5, 5) == 84}");
+            // Console.WriteLine($"Task4 test 5. Paste 12 inputs");
+            // Console.WriteLine($"Task4 test 5 {green.Task4(10, 2) == 61}");
         }
         private static void TestBlue()
         {
-            // var blue = new Blue();
+            var blue = new Blue();
             // Console.WriteLine($"Task1 test 1 {blue.Task1(0, 200, 30) == 0}");
             // Console.WriteLine($"Task1 test 2. Paste 5 inputs");
             // Console.WriteLine($"Task1 test 2 {blue.Task1(5, 200, 30) == 0.6}");
@@ -146,7 +146,7 @@ namespace Lab3
         }
         private static void TestPurple()
         {
-            // var purple = new Purple();
+            var purple = new Purple();
             // Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
             // Console.WriteLine($"Task1 test 2. Paste 10 inputs");
             // Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
@@ -177,16 +177,16 @@ namespace Lab3
             // Console.WriteLine($"Task3 test 5. Paste 10 inputs");
             // Console.WriteLine($"Task3 test 5 {purple.Task3(5) == 3.6}");
 
-            // Console.WriteLine($"Task4 test 1. Insert input until the task completes");
-            // Console.WriteLine($"Task4 test 1 {purple.Task4(000, 1) == ("Система заблокирована!", 1)}");
-            // Console.WriteLine($"Task4 test 2. Insert input until the task completes");
-            // Console.WriteLine($"Task4 test 2 {purple.Task4(000, 5) == ("Аварийный выход!", 4)}");
-            // Console.WriteLine($"Task4 test 3. Insert input until the task completes");
-            // Console.WriteLine($"Task4 test 3 {purple.Task4(123, 3) == ("Доступ разрешен!", 2)}");
-            // Console.WriteLine($"Task4 test 4. Insert input until the task completes");
-            // Console.WriteLine($"Task4 test 4 {purple.Task4(283, 3) == ("Доступ разрешен!", 3)}");
-            // Console.WriteLine($"Task4 test 5. Insert input until the task completes");
-            // Console.WriteLine($"Task4 test 5 {purple.Task4(283, 2) == ("Система заблокирована!", 2)}");
+            Console.WriteLine($"Task4 test 1. Insert input until the task completes");
+            Console.WriteLine($"Task4 test 1 {purple.Task4(000, 1) == ("Система заблокирована!", 1)}");
+            Console.WriteLine($"Task4 test 2. Insert input until the task completes");
+            Console.WriteLine($"Task4 test 2 {purple.Task4(000, 5) == ("Аварийный выход!", 4)}");
+            Console.WriteLine($"Task4 test 3. Insert input until the task completes");
+            Console.WriteLine($"Task4 test 3 {purple.Task4(123, 3) == ("Доступ разрешен!", 2)}");
+            Console.WriteLine($"Task4 test 4. Insert input until the task completes");
+            Console.WriteLine($"Task4 test 4 {purple.Task4(283, 3) == ("Доступ разрешен!", 3)}");
+            Console.WriteLine($"Task4 test 5. Insert input until the task completes");
+            Console.WriteLine($"Task4 test 5 {purple.Task4(283, 2) == ("Система заблокирована!", 2)}");
         }
     }
 }
