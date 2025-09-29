@@ -114,7 +114,7 @@ namespace Lab3
 
             return (solution, attempts);
         }
-        public double Task5(int a, int n)  // работает
+        public double Task5(int a, int n)
         {
             double luck = 0;
 
