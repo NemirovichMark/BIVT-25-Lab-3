@@ -7,7 +7,17 @@
             double milk = 0;
 
             // code here
-
+            double weight = 0;
+            double glassMl = glass * 0.001;
+            for (int x = 0; x < n; x++)
+            {
+                while (double.TryParse(Console.ReadLine().Replace('.', ','), out weight) != true) ;
+                if (weight < norma)
+                {
+                    milk += glassMl;
+                }
+            }
+            milk = Math.Round(milk, 2);
             // end
 
             return milk;
@@ -17,7 +27,16 @@
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                double x, y = 0;
+                while (double.TryParse(Console.ReadLine().Replace('.', ','), out x) != true);
+                while (double.TryParse(Console.ReadLine().Replace('.', ','), out y) != true);
+                if (x > 0 && y > 0) first++;
+                else if (x < 0 && y > 0) second++;
+                else if (x < 0 && y < 0) third++;
+                else if (x > 0 && y < 0) fourth++;
+            }
             // end
 
             return (first, second, third, fourth);
@@ -27,7 +46,25 @@
             int count = 0;
 
             // code here
-
+            int k = 0;
+            int score = 0;
+            bool deb = true;
+            for (int i = 0; i < n * 4; i++)
+            {
+                while (int.TryParse(Console.ReadLine(), out score) != true) ;
+                k++;
+                if (score == 2 || score == 3) deb = false;
+                if (k == 4 && deb == true)
+                {
+                    count += Convert.ToInt16(deb);
+                    k = 0;
+                }
+                else if (k == 4 && deb == false)
+                {
+                    k = 0;
+                    deb = true;
+                }       
+            }
             // end
 
             return count;
@@ -37,7 +74,23 @@
             int serias = 0;
 
             // code here
-
+            int taskTime = 10;
+            int seriasTime;
+            while (time < 24*60)
+            {
+                if (tasks > 0)
+                {
+                    time+=taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else
+                {
+                    while (int.TryParse(Console.ReadLine(), out seriasTime) != true);
+                    time += seriasTime;
+                    serias++;
+                }
+            }
             // end
 
             return (tasks, serias);
@@ -46,7 +99,32 @@
         {
 
             // code here
-
+            switch (number)
+            {
+                case 1: case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 2:
+                    agility += 5;
+                    intellect -= 5;
+                    power -= 5;
+                    break;
+                case 4:
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+                case 5:
+                    intellect += 7;
+                    power -= 5;
+                    break;
+                default:
+                    break;
+            }
+            intellect = Math.Max(0, intellect);
+            agility = Math.Max(0, agility);
+            power = Math.Max(0, power);
             // end
 
             return (power, agility, intellect);
