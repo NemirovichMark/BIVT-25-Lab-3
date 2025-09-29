@@ -11,10 +11,8 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                var line = Console.ReadLine();
-                var items = line.Split(' ');
-                double x = double.Parse(items[0]);
-                double y = double.Parse(items[1]);
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
                 if (Math.Pow(x, 2) + Math.Pow(y, 2) >= r1 * r1 && Math.Pow(x, 2) + Math.Pow(y, 2) <= r2 * r2)
                 {
                     count++;
@@ -33,12 +31,10 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                var line = Console.ReadLine();
-                var items = line.Split(' ');
-                int x1 = int.Parse(items[0]);
-                int x2 = int.Parse(items[1]);
-                int x3 = int.Parse(items[2]);
-                int x4 = int.Parse(items[3]);
+                int x1 = int.Parse(Console.ReadLine());
+                int x2 = int.Parse(Console.ReadLine());
+                int x3 = int.Parse(Console.ReadLine());
+                int x4 = int.Parse(Console.ReadLine());
                 if (x1 ==2 || x2 == 2 || x3 == 2 || x4 == 2)
                 {
                     average += 1;
@@ -58,7 +54,6 @@ namespace Lab3
             int mark = 0;
             int n = exams;
             double score = 0;
-            double avgMark = 0;
 
             // code here
             while (exams > 0)
@@ -99,17 +94,21 @@ namespace Lab3
             for (attempts = 0; attempts < limit; attempts++)
             {
                 attempts++;
-                int input = int.Parse(Console.ReadLine());
-                if (input == code)
-                {
-                    solution = "Доступ разрешен!";
-                    break;
-                }
-                else if (input == -1)
+                int input1 = int.Parse(Console.ReadLine());
+                int input2 = int.Parse(Console.ReadLine());
+                int input3 = int.Parse(Console.ReadLine());
+
+                if (input1 == -1 || input2 == -1 || input3 == -1)
                 {
                     solution = "Аварийный выход!";
                     break;
                 }
+                else if (input1 * 100 + input2 * 10 + input3 == code)
+                {
+                    solution = "Доступ разрешен!";
+                    break;
+                }
+                
             }
 
             // end
