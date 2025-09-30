@@ -187,8 +187,6 @@ namespace Lab3
             Console.WriteLine($"Task4 test 4 {purple.Task4(283, 3) == ("Доступ разрешен!", 3)}");
             Console.WriteLine($"Task4 test 5. Insert input until the task completes");
             Console.WriteLine($"Task4 test 5 {purple.Task4(283, 2) == ("Система заблокирована!", 2)}");
-            
-            purple.Task5(1, 60);
         }
     }
 }
