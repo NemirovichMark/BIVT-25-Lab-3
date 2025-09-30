@@ -114,24 +114,24 @@ namespace Lab3
                         // Console.Write($"\n{day}: Пик энергии! {luck} -> ");
                         luck *= 1.5;
                         if (luck > 100) luck = 100;
-                        Console.Write(luck);
+                        // Console.Write(luck);
                         break;
                     case 4 or 11 or 18 or 25:
                         // Console.Write($"\n{day}: Темные силы... {luck} -> ");
                         luck -= 10;
                         if (luck < 0) luck = 0;
-                        Console.Write(luck);
+                        // Console.Write(luck);
                         break;
                     case 7 or 14 or 21 or 28:
                         // Console.Write($"\n{day}: Мистический шанс! {luck} -> ");
                         if (luck < 50) luck = 55;
-                        Console.Write(luck);
+                        // Console.Write(luck);
                         break;
                     default:
                         // Console.Write($"\n{day}: Обычный день {luck} -> ");
                         luck += 5;
                         if (luck > 100) luck = 100;
-                        Console.Write(luck);
+                        // Console.Write(luck);
                         break;
                 }
             }
