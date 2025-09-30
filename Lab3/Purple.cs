@@ -104,7 +104,7 @@ namespace Lab3
             double luck = 0;
 
             // code here
-            for (int i = a; i < n; i++)
+            for (int i = a; i <= n; i++)
             {
                 int day = i;
                 if (day > 31) day -= 31;

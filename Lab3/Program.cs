@@ -6,8 +6,8 @@ namespace Lab3
     {
         public static void Main()
         {
-            // CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-            // CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
             // Console.WriteLine("\nTest white league\n");
             // TestWhite();
@@ -16,7 +16,7 @@ namespace Lab3
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
             // Console.WriteLine("\nTest purple league\n");
-            // TestPurple();
+            TestPurple();
         }
         private static void TestWhite()
         {
@@ -146,7 +146,7 @@ namespace Lab3
         }
         private static void TestPurple()
         {
-            // var purple = new Purple();
+            var purple = new Purple();
             // Console.WriteLine($"Task1 test 1 {purple.Task1(0, 0, 0) == 0}");
             // Console.WriteLine($"Task1 test 2. Paste 10 inputs");
             // Console.WriteLine($"Task1 test 2 {purple.Task1(5, 0, 3) == 5}");
@@ -187,6 +187,8 @@ namespace Lab3
             // Console.WriteLine($"Task4 test 4 {purple.Task4(283, 3) == ("Доступ разрешен!", 3)}");
             // Console.WriteLine($"Task4 test 5. Insert input until the task completes");
             // Console.WriteLine($"Task4 test 5 {purple.Task4(283, 2) == ("Система заблокирована!", 2)}");
+            
+            Console.WriteLine(purple.Task5(1, 2));
         }
     }
 }
