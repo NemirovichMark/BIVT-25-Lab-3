@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.IO.Compression;
 using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Lab3
 {
@@ -205,4 +202,5 @@ namespace Lab3
             return luck;
         }
     }
+
 }
