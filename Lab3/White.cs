@@ -37,7 +37,7 @@ namespace Lab3
             for(int i = 0; i < n; i++)
             {
                 int Time = int.Parse(Console.ReadLine());
-                if(Time >= limit)
+                if(Time <= limit)
                 {
                     count++;
                 }
@@ -85,3 +85,4 @@ namespace Lab3
         }
     }
 }
+
