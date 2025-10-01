@@ -1,126 +1,58 @@
-﻿using System.ComponentModel.Design;
-using System.IO.Pipes;
-using System.Runtime.InteropServices;
+﻿using System.Security.Cryptography.X509Certificates;
 
-namespace Lab1
+namespace Lab3
 {
     public class White
     {
-        public bool Task1(double d)
+        public double Task1(int n)
         {
-            bool answer = false;
+            double averageHeight = 0;
 
             // code here
-            if (d > 0) answer = true;
-            else answer = false;
 
             // end
 
-            return answer;
+            return averageHeight;
         }
-        public bool Task2(int n)
+        public double Task2(int n)
         {
-            bool answer = false;
+            double bestResult = 0;
 
             // code here
-            if (n % 2 == 0) answer = true;
-            else answer = false;
 
             // end
 
-            return answer;
+            return bestResult;
         }
-        public int Task3(int a, int b)
+        public int Task3(int n, double limit)
         {
-            int answer = 0;
+            int count = 0;
 
             // code here
-            if (a > b) answer = a;
-            else answer = b;
-            
 
             // end
 
-            return answer;
+            return count;
         }
-        public double Task4(double d, double f)
+        public int Task4(int maxAmount)
         {
-            double answer = 0;
+            int hours = 0;
 
             // code here
-            double a = Math.Abs(f);
-            double b = Math.Abs(d);
-            if (a < b) answer = f;
-            else
-            {
-                answer = d;
-            }
-            // end
-
-            return answer;
-        }
-        public double Task5(double x)
-        {
-            double answer = 0;
-
-            // code here
-            if (Math.Abs(x) > 1) answer = 1;
-            else answer = x;
-
-                // end
-
-                return answer;
-        }
-        public bool Task6(double x, double y, double r)
-        {
-            bool answer = false;
-
-            // code here
-            double vir = x * x + y * y - r * r;
-            if (Math.Abs(vir) <= Math.Pow(10, -6) || Math.Abs(vir) <= r * r * 1e-4)
-            {
-                answer = true;
-            }
-            // end
-
-            return answer;
-        }
-
-        public bool Task7(int n)
-        {
-                
-            // code here
-            int s = n * n;
-            bool answer = false;
-            if (s - n > 2 * n) 
-            { 
-                if (n % 2 == 0)
-                {
-                    answer = true;
-                }
-            }
-            return answer;
 
             // end
 
+            return hours;
         }
-        public bool Task8(double L, int T, int M)
+        public double Task5(int r, int type)
         {
-            bool answer = false;
+            double area = 0;
 
             // code here
-            if (L / 10 <= 3)
-            {
-                if (T+M >= 5)
-                {
-                    if ( M % 2 == 0)
-                        answer = true;
-                }
-                
-            }   
+
             // end
 
-            return answer;
+            return area;
         }
     }
 }
