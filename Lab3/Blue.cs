@@ -7,6 +7,16 @@
             double milk = 0;
 
             // code here
+            int c = 0;
+            for (int i = 0; i < n; i++) {
+
+                double a = Double.Parse(Console.ReadLine());
+                if (a < norma){
+                    c++;
+                }
+
+            }
+            milk = (double)c*glass/1000;
 
             // end
 
@@ -17,7 +27,30 @@
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
+            double x = 0;
+            double y = 0;
+            for (int i = 0; i < n; i++)
+            {
 
+                x = Double.Parse(Console.ReadLine());
+                y = Double.Parse(Console.ReadLine());
+
+                if(x > 0 & y > 0){
+                    first++;
+                }
+                else if (x < 0 & y > 0)
+                {
+                    second++;
+                }
+                else if(x < 0 & y < 0)
+                {
+                    third++;
+                }
+                else if(x>0 & y < 0)
+                {
+                    fourth++;
+                }
+            }
             // end
 
             return (first, second, third, fourth);
@@ -27,7 +60,10 @@
             int count = 0;
 
             // code here
+            for(int i = 0; i < n; i++)
+            {
 
+            }
             // end
 
             return count;
@@ -37,6 +73,8 @@
             int serias = 0;
 
             // code here
+            int seriasTime = 10;
+            int taskTime = 10;
 
             // end
 
