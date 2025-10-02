@@ -9,7 +9,12 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-
+            for (int i = 0; i<n; i++)
+            {
+                int.TryParse(Console.ReadLine(), out int height);
+                averageHeight += height;
+            }
+            averageHeight /= n;
             // end
 
             return averageHeight;
@@ -19,7 +24,16 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
-
+            double bestTime = 99999999;
+            for (int i = 0; i < n; i++)
+            {
+                double time = double.Parse(Console.ReadLine());
+                if (time < bestTime)
+                {
+                    bestTime = time;
+                }
+            }
+            if (n != 0) bestResult = bestTime;
             // end
 
             return bestResult;
@@ -29,7 +43,16 @@ namespace Lab3
             int count = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out double U);
+                if ( U<=limit)
+                {
+                    count++;
+                }
+            
+               
+            }
             // end
 
             return count;
@@ -39,7 +62,18 @@ namespace Lab3
             int hours = 0;
 
             // code here
-
+            int amount = 0;
+            int.TryParse(Console.ReadLine(), out int hour);
+            while(amount < maxAmount)
+            {
+                if (hour % 5 != 4)
+                {
+                    amount += 1;
+                    hours++;
+                }
+                amount -= 2;
+                hours++;
+            }
             // end
 
             return hours;
@@ -49,10 +83,25 @@ namespace Lab3
             double area = 0;
 
             // code here
-
+            double Skv = r * r;
+            double Skr = Math.PI * (r * r);
+            double Str = (Math.Sqrt(3) * (r * r)) / 4;
+            switch (type)
+            {
+                case 1:
+                    area = Skv;
+                    break;
+                case 2:
+                    area = Skr;
+                    break;
+                case 3:
+                    area = Str;
+                    break;
+            }
             // end
 
             return area;
         }
     }
+
 }
