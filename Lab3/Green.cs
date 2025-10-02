@@ -111,7 +111,11 @@ namespace Lab3
                     area = Math.Abs((Math.PI * a * a - Math.PI * b * b));
                     break;
                 case 3:
-                    area = 0.5 * a * Math.Sqrt(b * b - (a * a) / 4);
+                    double p = (a + b + b) / 2.0;
+                    area = Math.Sqrt(p * (p - a) * (p - b) * (p - b));
+                    break;
+                default:
+                    area = 0;
                     break;
             }
             // end

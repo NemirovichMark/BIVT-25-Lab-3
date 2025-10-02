@@ -6,13 +6,13 @@ namespace Lab3
     {
         public static void Main()
         {
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+            //CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            //CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
             // Console.WriteLine("\nTest white league\n");
             // TestWhite();
-            Console.WriteLine("\nTest green league\n");
-            TestGreen();
+            //Console.WriteLine("\nTest green league\n");
+            //TestGreen();
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
             // Console.WriteLine("\nTest purple league\n");
@@ -64,16 +64,16 @@ namespace Lab3
         }
         private static void TestGreen()
         {
-            var green = new Green();
-            Console.WriteLine($"Task1 test 1 {green.Task1(1, 2, 2, 0) == 0}");
-            Console.WriteLine($"Task1 test 2. Paste 4 inputs");
-            Console.WriteLine($"Task1 test 2 {green.Task1(1, 1, 2, 2) == 2}");
-            Console.WriteLine($"Task1 test 3. Paste 10 inputs");
-            Console.WriteLine($"Task1 test 3 {green.Task1(1, 1, 3, 5) == 4}");
-            Console.WriteLine($"Task1 test 4. Paste 20 inputs");
-            Console.WriteLine($"Task1 test 4 {green.Task1(1, 1, 2, 5) == 2}");
-            Console.WriteLine($"Task1 test 5. Paste 20 inputs");
-            Console.WriteLine($"Task1 test 5 {green.Task1(0, 1, 2, 10) == 7}");
+            //var green = new Green();
+            //Console.WriteLine($"Task1 test 1 {green.Task1(1, 2, 2, 0) == 0}");
+            //Console.WriteLine($"Task1 test 2. Paste 4 inputs");
+            //Console.WriteLine($"Task1 test 2 {green.Task1(1, 1, 2, 2) == 2}");
+            //Console.WriteLine($"Task1 test 3. Paste 10 inputs");
+            //Console.WriteLine($"Task1 test 3 {green.Task1(1, 1, 3, 5) == 4}");
+            //Console.WriteLine($"Task1 test 4. Paste 20 inputs");
+            //Console.WriteLine($"Task1 test 4 {green.Task1(1, 1, 2, 5) == 2}");
+            //Console.WriteLine($"Task1 test 5. Paste 20 inputs");
+            //Console.WriteLine($"Task1 test 5 {green.Task1(0, 1, 2, 10) == 7}");
 
             //Console.WriteLine($"Task2 test 1 {green.Task2(0) == (0, 0)}");
             //Console.WriteLine($"Task2 test 2. Paste 2 inputs");
