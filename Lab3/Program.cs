@@ -75,20 +75,20 @@ namespace Lab3
             Console.WriteLine($"Task1 test 5. Paste 20 inputs");
             Console.WriteLine($"Task1 test 5 {green.Task1(0, 1, 2, 10) == 7}");
 
-            //Console.WriteLine($"Task2 test 1 {green.Task2(0) == (0, 0)}");
-            //Console.WriteLine($"Task2 test 2. Paste 2 inputs");
-            //Console.WriteLine($"Task2 test 2 {green.Task2(1) == (1, 2.080865204668481)}");
-            //Console.WriteLine($"Task2 test 3. Paste 4 inputs");
-            //Console.WriteLine($"Task2 test 3 {green.Task2(2) == (1, 2.080865204668481)}");
-            //Console.WriteLine($"Task2 test 4. Paste 10 inputs");
-            //Console.WriteLine($"Task2 test 4 {green.Task2(5) == (5, 0.7071067811865476)}");
-            //Console.WriteLine($"Task2 test 5. Paste 20 inputs");
-            //Console.WriteLine($"Task2 test 5 {green.Task2(10) == (10, 0.5099019513592785)}");
+            Console.WriteLine($"Task2 test 1 {green.Task2(0) == (0, 0)}");
+            Console.WriteLine($"Task2 test 2. Paste 2 inputs");
+            Console.WriteLine($"Task2 test 2 {green.Task2(1) == (1, 2.080865204668481)}");
+            Console.WriteLine($"Task2 test 3. Paste 4 inputs");
+            Console.WriteLine($"Task2 test 3 {green.Task2(2) == (1, 2.080865204668481)}");
+            Console.WriteLine($"Task2 test 4. Paste 10 inputs");
+            Console.WriteLine($"Task2 test 4 {green.Task2(5) == (5, 0.7071067811865476)}");
+            Console.WriteLine($"Task2 test 5. Paste 20 inputs");
+            Console.WriteLine($"Task2 test 5 {green.Task2(10) == (10, 0.5099019513592785)}");
 
-            //Console.WriteLine($"Task3 test 1. Insert input until the task completes (first set)");
-            //Console.WriteLine($"Task3 test 1 {green.Task3() == 2}");
-            //Console.WriteLine($"Task3 test 2. Insert input until the task completes (second set)");
-            //Console.WriteLine($"Task3 test 2 {green.Task3() == 2}");
+            Console.WriteLine($"Task3 test 1. Insert input until the task completes (first set)");
+            Console.WriteLine($"Task3 test 1 {green.Task3() == 2}");
+            Console.WriteLine($"Task3 test 2. Insert input until the task completes (second set)");
+            Console.WriteLine($"Task3 test 2 {green.Task3() == 2}");
 
             Console.WriteLine($"Task4 test 1 {green.Task4(0, 0) == 0}");
             Console.WriteLine($"Task4 test 2. Paste 5 inputs");
