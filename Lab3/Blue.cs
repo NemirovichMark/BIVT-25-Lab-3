@@ -70,22 +70,69 @@
         }
         public (int tasks, int serias) Task4(int time, int tasks)
         {
+            int seriasTime = 0;
+            int taskTime = 10;
             int serias = 0;
 
             // code here
-
+            while (time < 24 * 60)
+            {
+                if (tasks > 0)
+                {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else {
+                    bool resBool = Int32.TryParse(Console.ReadLine(), out seriasTime);
+                    if (resBool)
+                    {
+                        time += seriasTime;
+                        serias++;
+                    }  
+                }
+            }
             // end
 
             return (tasks, serias);
         }
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
+            switch (number)
+            {
+                case 1:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 2:
+                    agility += 5;
+                    power -= 5;
+                    intellect -= 5;
+                    break;
+                case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 4:
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+                case 5:
+                    intellect += 7;
+                    power -= 5;
+                    break;
+                default:
+                   
+                    break;
+            }
 
-            // code here
-
-            // end
+            if (power < 0) power = 0;
+            if (agility < 0) agility = 0;
+            if (intellect < 0) intellect = 0;
 
             return (power, agility, intellect);
         }
+
     }
 }
