@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Lab3
 {
@@ -9,7 +9,13 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-
+            for( int i = 0; i < n; i++)
+            {
+                int.TryParse(Console.ReadLine(), out int height);
+                averageHeight += height;
+            }
+            averageHeight /= n;
+                
             // end
 
             return averageHeight;
@@ -19,6 +25,16 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
+            double bestTime = 99999999;
+            for ( int i = 0;i < n; i++)
+            {
+                double time = double.Parse(Console.ReadLine());
+                if (time < bestTime)
+                {
+                    bestTime = time;
+                }
+            }
+            if (n != 0) bestResult = bestTime;
 
             // end
 
@@ -27,8 +43,16 @@ namespace Lab3
         public int Task3(int n, double limit)
         {
             int count = 0;
-
+           
             // code here
+            for (int i = 0; i < n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out double limit1);
+                if (limit1 <= limit)
+                {
+                    count++;
+                }
+            }
 
             // end
 
@@ -37,8 +61,21 @@ namespace Lab3
         public int Task4(int maxAmount)
         {
             int hours = 0;
+            int amount = 0;
 
             // code here
+            int.TryParse (Console.ReadLine(), out  int hour);
+            while ( amount < maxAmount)
+            {
+                if (hours % 5 != 4)
+                {
+                    amount += 1;
+                    hours++;
+                }
+                amount -= 2;
+                hours++;
+            }
+
 
             // end
 
@@ -49,7 +86,24 @@ namespace Lab3
             double area = 0;
 
             // code here
-
+            double s1 = r * r;
+            double s2 = Math.PI * (r * r);
+            double s3 = (Math.Sqrt(3) * (r * r))/4;
+            switch (type)
+            {
+                case 1:
+                    area = s1;
+                    break;
+                case 2:
+                    area = s2;
+                    break;
+                case 3:
+                    area = s3;
+                    break;
+            }
+              
+            
+            
             // end
 
             return area;
