@@ -80,7 +80,7 @@ namespace Lab3
                 intellect -= 5;
             }else if (number == 2)
             {
-                agility += 5; power -= 5;
+                agility += 5; power -= 5; intellect -= 5;
             } else if (number == 4)
             {
                 agility += 15; power -= 10; intellect -= 10;
