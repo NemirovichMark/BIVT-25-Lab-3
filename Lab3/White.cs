@@ -1,58 +1,127 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Lab3
+﻿namespace Lab2
 {
     public class White
     {
-        public double Task1(int n)
+        const double E = 0.0001;
+        public int Task1(int n)
         {
-            double averageHeight = 0;
+            int answer = 0;
 
             // code here
-
+            for (int a = 2; a <= 3 * n - 1; a += 3)
+            {
+                answer += a;
+            }
             // end
 
-            return averageHeight;
+            return answer;
         }
         public double Task2(int n)
         {
-            double bestResult = 0;
+            double answer = 0;
 
             // code here
-
+            for (double a = 1; a <= n; a++)
+            {
+                answer += (1 / a);
+            }
             // end
 
-            return bestResult;
+            return answer;
         }
-        public int Task3(int n, double limit)
+        public long Task3(int n)
         {
-            int count = 0;
+            long answer = 1;
 
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                answer *= i;
+            }
             // end
 
-            return count;
+            return answer;
         }
-        public int Task4(int maxAmount)
+        public long Task4(int a, int b)
         {
-            int hours = 0;
+            long answer = 1;
 
             // code here
-
+            for (int i = 1; i <= b; i++)
+            {
+                answer *= a;
+            }
             // end
 
-            return hours;
+            return answer;
         }
-        public double Task5(int r, int type)
+        public int Task5(int L)
         {
-            double area = 0;
+            int answer = 1;
+            int p = 1;
 
             // code here
-
+            for (int n = 1; true; n += 3)
+            {
+                p *= n;
+                if (p > L)
+                {
+                    answer = n;
+                    break;
+                }
+            }
             // end
 
-            return area;
+            return answer;
+        }
+        public double Task6(double x)
+        {
+            double answer = 0;
+
+            // code here
+            for (int a = 0; true; a += 2)
+            {
+                double i = Math.Pow(x, a);
+                answer += i;
+                if (i < E)
+                {
+                    
+                    break;
+                }
+                
+            }
+            // end
+
+            return answer;
+        }
+
+        public int Task7(int n)
+        {
+            int answer = 0;
+
+            // code here
+            int sum = 0;
+            while (sum < n)
+            {
+                answer++;
+                sum += answer;
+            }
+            // end
+
+            return answer;
+        }
+        public int Task8(double L, double v)
+        {
+            int answer = 0;
+            const double R = 6371.0; // радиус Земли, км
+
+            // code here
+            double a = ((Math.Sqrt(R * R + L * L)) - R) / (v);
+            answer = (int)Math.Ceiling(a);
+            // end
+
+            return answer;
         }
     }
+
 }
