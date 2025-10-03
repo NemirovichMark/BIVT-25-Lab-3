@@ -1,4 +1,4 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Green
     {
@@ -6,9 +6,15 @@
         {
             int count = 0;
 
-            // code here
-
-            // end
+            for (int i = 0; i < n; i++)
+            {
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                if ((x - a) * (x - a) + (y - b) * (y - b) <= r * r)
+                {
+                    count++;
+                }
+            }
 
             return count;
         }
@@ -17,9 +23,18 @@
             int index = 0;
             double length = 0;
 
-            // code here
-
-            // end
+            double mx = 9999999999999;
+            for (int i = 0; i < n; i++)
+            {
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                if (Math.Sqrt(x * x + y * y) <= mx)
+                {
+                    mx = Math.Sqrt(x * x + y * y);
+                    index = i + 1;
+                    length = mx;
+                }
+            }
 
             return (index, length);
         }
@@ -27,9 +42,22 @@
         {
             int count = 0;
 
-            // code here
-
-            // end
+            bool f = true;
+            while (f)
+            {
+                double x, y;
+                if ((double.TryParse(Console.ReadLine(), out x)) && (double.TryParse(Console.ReadLine(), out y)))
+                {
+                    if ((x >= 0 && x <= Math.PI) && (y >= 0 && y <= Math.Sin(x)))
+                    {
+                        count++;
+                    }
+                }
+                else
+                {
+                    f = false;
+                }
+            }
 
             return count;
         }
@@ -37,9 +65,20 @@
         {
             int score = 0;
 
-            // code here
-
-            // end
+            while (labs > 0 || cw > 0)
+            {
+                int mark = int.Parse(Console.ReadLine());
+                if (labs > 0)
+                {
+                    score += mark;
+                    labs--;
+                }
+                else
+                {
+                    score += 4 * mark;
+                    cw--;
+                }
+            }
 
             return score;
         }
@@ -47,9 +86,26 @@
         {
             double area = 0;
 
-            // code here
-
-            // end
+            switch (type)
+            {
+                case 1:
+                    area = a * b;
+                    break;
+                case 2:
+                    int R = Math.Max(a, b);
+                    int r = Math.Min(a, b);
+                    area = Math.PI * (R * R - r * r);
+                    break;
+                case 3:
+                    if (2 * b > a)
+                    {
+                        double h = Math.Sqrt(b * b - (a * a) / 4.0);
+                        area = 0.5 * a * h;
+                    }
+                    break;
+                default:
+                    break;
+            }
 
             return area;
         }
