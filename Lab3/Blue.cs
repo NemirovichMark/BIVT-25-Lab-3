@@ -1,4 +1,4 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Blue
     {
@@ -7,17 +7,30 @@
             double milk = 0;
 
             // code here
-
+            double w;
+            for (int i = 0; i < n; i++)
+            {
+                w = Convert.ToDouble(Console.ReadLine());
+                if (w < (double)norma)
+                    milk += glass;
+            }
             // end
 
-            return milk;
+            return milk/1000;
         }
         public (int first, int second, int third, int fourth) Task2(int n)
         {
             int first = 0, second = 0, third = 0, fourth = 0;
-
+            double x, y;
             // code here
-
+            for (int i=1;i<=n;i++){
+                x=Convert.ToDouble((Console.ReadLine()));
+                y=Convert.ToDouble((Console.ReadLine()));
+                if (x > 0 && y > 0) first++;
+                else if (y > 0 && x < 0) second++;
+                else if (y < 0 && x < 0) third++;
+                else if (x > 0 && y < 0) fourth++;
+            }
             // end
 
             return (first, second, third, fourth);
@@ -25,19 +38,42 @@
         public int Task3(int n)
         {
             int count = 0;
+            short a, b, c, d;
 
             // code here
-
+            for (int i = 1; i <= n; i++){
+                Console.WriteLine("1 mark : ");
+                a=Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("2 mark : ");
+                b=Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("3 mark : ");
+                c=Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("4 mark : ");
+                d=Convert.ToInt16(Console.ReadLine());
+                if (a > 3 && b > 3 && c > 3 && d > 3) count++;
+            }
             // end
 
             return count;
         }
         public (int tasks, int serias) Task4(int time, int tasks)
         {
-            int serias = 0;
+            int serias = 0, seriasTime, taskTime=10;
 
             // code here
+            while (time < 24 * 60) {
+                if (tasks > 0) {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else {
+                    seriasTime = Convert.ToInt32(Console.ReadLine());
+                    time += seriasTime;
+                    serias++;
+                }
 
+            }
             // end
 
             return (tasks, serias);
@@ -46,7 +82,26 @@
         {
 
             // code here
-
+            switch (number) {
+                case 1:
+                case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 2:
+                    agility += 5;
+                    power -= 5;
+                    break;
+                case 4:
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+                case 5:
+                    intellect += 7;
+                    power -= 5;
+                    break;
+            }   
             // end
 
             return (power, agility, intellect);
