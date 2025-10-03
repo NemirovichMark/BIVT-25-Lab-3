@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Security.Cryptography;
 
@@ -118,18 +119,15 @@ namespace Lab3
 
             for (int i = 0; i != n; i++)
             {
-                bool fl = true;
-                Console.Write("Оценки: (через пробел) = ");
-                string[] Marks = Console.ReadLine().Split();
-                foreach (string s in Marks)
-
-                {
-                    if (Convert.ToInt32(s) < 4) fl = false;
-                    break;
+                bool Flag = true;
+                for (int j = 0; j != 4; j++) {
+                    int s = Convert.ToInt32(Console.ReadLine());
+                    if (s < 4) Flag = false;
                 }
-                if (fl) { count++; }
-
+                if (Flag) count++;
+           
             }
+
             // end
 
             return count;
