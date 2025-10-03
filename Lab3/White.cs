@@ -1,127 +1,114 @@
-﻿namespace Lab2
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Lab3
 {
     public class White
     {
-        const double E = 0.0001;
-        public int Task1(int n)
+        public double Task1(int n)
         {
-            int answer = 0;
+            double averageHeight = 0;
 
             // code here
-            for (int a = 2; a <= 3 * n - 1; a += 3)
+            double s = 0;
+            if (n > 0)
             {
-                answer += a;
+                for (int i = 1; i <= n; i++)
+                {
+                    int.TryParse(Console.ReadLine(), out int a);
+                    s += a;
+                }
+                averageHeight = s / n;
             }
+
             // end
 
-            return answer;
+
+            return averageHeight;
         }
         public double Task2(int n)
         {
-            double answer = 0;
+            double bestResult = 0;
 
             // code here
-            for (double a = 1; a <= n; a++)
+            
+            if (n > 0)
+                bestResult = 100 * 1000;
             {
-                answer += (1 / a);
-            }
-            // end
-
-            return answer;
-        }
-        public long Task3(int n)
-        {
-            long answer = 1;
-
-            // code here
-            for (int i = 1; i <= n; i++)
-            {
-                answer *= i;
-            }
-            // end
-
-            return answer;
-        }
-        public long Task4(int a, int b)
-        {
-            long answer = 1;
-
-            // code here
-            for (int i = 1; i <= b; i++)
-            {
-                answer *= a;
-            }
-            // end
-
-            return answer;
-        }
-        public int Task5(int L)
-        {
-            int answer = 1;
-            int p = 1;
-
-            // code here
-            for (int n = 1; true; n += 3)
-            {
-                p *= n;
-                if (p > L)
+                for (int i = 1; i <= n; i++)
                 {
-                    answer = n;
-                    break;
+                    double.TryParse(Console.ReadLine(), out double a);
+                    bestResult = Math.Min(a, bestResult);
                 }
             }
             // end
 
-            return answer;
+            return bestResult;
         }
-        public double Task6(double x)
+        public int Task3(int n, double limit)
         {
-            double answer = 0;
+            int count = 0;
 
             // code here
-            for (int a = 0; true; a += 2)
+            if (n > 0)
             {
-                double i = Math.Pow(x, a);
-                answer += i;
-                if (i < E)
+                for (int i = 1; i <= n; i++)
                 {
-                    
-                    break;
+                    double.TryParse(Console.ReadLine(), out double a);
+                    if (a <= limit)
+                    {
+                        count += 1;
+                    }
                 }
-                
             }
+
             // end
 
-            return answer;
+            return count;
         }
-
-        public int Task7(int n)
+        public int Task4(int maxAmount)
         {
-            int answer = 0;
+            int hours = 0;
 
             // code here
-            int sum = 0;
-            while (sum < n)
+            int amount = 0;
+            int.TryParse(Console.ReadLine(), out amount);
+            while (amount < maxAmount)
             {
-                answer++;
-                sum += answer;
+                if (hours % 5 != 4)
+                {
+                    amount += 1;
+                }
+                else
+                {
+                    amount -= 2;
+                    hours++;
+                }
             }
             // end
 
-            return answer;
+            return hours;
         }
-        public int Task8(double L, double v)
+        public double Task5(int r, int type)
         {
-            int answer = 0;
-            const double R = 6371.0; // радиус Земли, км
+            double area = 0;
 
             // code here
-            double a = ((Math.Sqrt(R * R + L * L)) - R) / (v);
-            answer = (int)Math.Ceiling(a);
+            if (type == 1)
+            {
+                area = r * r;
+            }
+            else if (type == 2)
+            {
+                area = Math.PI * r * r;
+            }
+            else if (type == 3)
+            {
+                area = 0.86602540378 * 0.5 * r * r;
+            }
             // end
 
-            return answer;
+            return area;
+
         }
     }
-
 }
