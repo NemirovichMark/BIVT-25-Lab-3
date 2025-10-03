@@ -135,9 +135,23 @@ namespace Lab3
         public (int tasks, int serias) Task4(int time, int tasks)
         {
             int serias = 0;
-
+            int TaskTime = 10;
+            
             // code here
-
+            while (time/60 < 24)
+            {
+                if (tasks > 0)
+                {
+                    time += TaskTime;
+                    TaskTime += 5;
+                    tasks--;
+                }
+                else
+                { 
+                    time += Convert.ToInt32(Console.ReadLine());
+                    serias++;
+                }
+            }
             // end
 
             return (tasks, serias);
