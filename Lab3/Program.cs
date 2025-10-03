@@ -6,11 +6,11 @@ namespace Lab3
     {
         public static void Main()
         {
-            // CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
             // CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
-            // Console.WriteLine("\nTest white league\n");
-            // TestWhite();
+            //Console.WriteLine("\nTest white league\n");
+            TestWhite();
             // Console.WriteLine("\nTest green league\n");
             // TestGreen();
             // Console.WriteLine("\nTest blue league\n");
@@ -20,47 +20,47 @@ namespace Lab3
         }
         private static void TestWhite()
         {
-            // var white = new White();
-            // Console.WriteLine($"Task1 test 1 {white.Task1(0) == 0}");
-            // Console.WriteLine($"Task1 test 2. Paste 1 inputs");
-            // Console.WriteLine($"Task1 test 2 {white.Task1(1) == 168}");
-            // Console.WriteLine($"Task1 test 3. Paste 2 inputs");
-            // Console.WriteLine($"Task1 test 3 {white.Task1(2) == 157.5}");
-            // Console.WriteLine($"Task1 test 4. Paste 5 inputs");
-            // Console.WriteLine($"Task1 test 4 {white.Task1(5) == 164.6}");
-            // Console.WriteLine($"Task1 test 5. Paste 10 inputs");
-            // Console.WriteLine($"Task1 test 5 {white.Task1(10) == 163.4}");
-            
-            // Console.WriteLine($"Task2 test 1 {white.Task2(0) == 0}");
-            // Console.WriteLine($"Task2 test 2. Paste 1 inputs");
-            // Console.WriteLine($"Task2 test 2 {white.Task2(1) == 15.8}");
-            // Console.WriteLine($"Task2 test 3. Paste 2 inputs");
-            // Console.WriteLine($"Task2 test 3 {white.Task2(2) == 14.2}");
-            // Console.WriteLine($"Task2 test 4. Paste 5 inputs");
-            // Console.WriteLine($"Task2 test 4 {white.Task2(5) == 14.2}");
-            // Console.WriteLine($"Task2 test 5. Paste 10 inputs");
-            // Console.WriteLine($"Task2 test 5 {white.Task2(10) == 14.0}");
-            
-            // Console.WriteLine($"Task3 test 1 {white.Task3(0, 15.1) == 0}");
-            // Console.WriteLine($"Task3 test 2. Paste 2 inputs");
-            // Console.WriteLine($"Task3 test 2 {white.Task3(2, 15.1) == 1}");
-            // Console.WriteLine($"Task3 test 3. Paste 5 inputs");
-            // Console.WriteLine($"Task3 test 3 {white.Task3(5, 15.1) == 3}");
-            // Console.WriteLine($"Task3 test 4. Paste 10 inputs");
-            // Console.WriteLine($"Task3 test 4 {white.Task3(10, 15.1) == 7}");
-            // Console.WriteLine($"Task3 test 5. Paste 10 inputs");
-            // Console.WriteLine($"Task3 test 5 {white.Task3(10, 14.5) == 5}");
-            
-            // Console.WriteLine($"Task4 test 1. Paste 7");
-            // Console.WriteLine($"Task4 test 1 {white.Task4(0) == 0}");
-            // Console.WriteLine($"Task4 test 2. Paste 7");
-            // Console.WriteLine($"Task4 test 2 {white.Task4(5) == 0}");
-            // Console.WriteLine($"Task4 test 3. Paste 7");
-            // Console.WriteLine($"Task4 test 3 {white.Task4(10) == 3}");
-            // Console.WriteLine($"Task4 test 4. Paste 7");
-            // Console.WriteLine($"Task4 test 4 {white.Task4(20) == 28}");
-            // Console.WriteLine($"Task4 test 5. Paste 7");
-            // Console.WriteLine($"Task4 test 5 {white.Task4(50) == 103}");
+            var white = new White();
+            Console.WriteLine($"Task1 test 1 {white.Task1(0) == 0}");
+            Console.WriteLine($"Task1 test 2. Paste 1 inputs");
+            Console.WriteLine($"Task1 test 2 {white.Task1(1) == 168}");
+            Console.WriteLine($"Task1 test 3. Paste 2 inputs");
+            Console.WriteLine($"Task1 test 3 {white.Task1(2) == 157.5}");
+            Console.WriteLine($"Task1 test 4. Paste 5 inputs");
+            Console.WriteLine($"Task1 test 4 {white.Task1(5) == 164.6}");
+            Console.WriteLine($"Task1 test 5. Paste 10 inputs");
+            Console.WriteLine($"Task1 test 5 {white.Task1(10) == 163.4}");
+
+            Console.WriteLine($"Task2 test 1 {white.Task2(0) == 0}");
+            Console.WriteLine($"Task2 test 2. Paste 1 inputs");
+            Console.WriteLine($"Task2 test 2 {white.Task2(1) == 15.8}");
+            Console.WriteLine($"Task2 test 3. Paste 2 inputs");
+            Console.WriteLine($"Task2 test 3 {white.Task2(2) == 14.2}");
+            Console.WriteLine($"Task2 test 4. Paste 5 inputs");
+            Console.WriteLine($"Task2 test 4 {white.Task2(5) == 14.2}");
+            Console.WriteLine($"Task2 test 5. Paste 10 inputs");
+            Console.WriteLine($"Task2 test 5 {white.Task2(10) == 14.0}");
+
+            Console.WriteLine($"Task3 test 1 {white.Task3(0, 15.1) == 0}");
+            Console.WriteLine($"Task3 test 2. Paste 2 inputs");
+            Console.WriteLine($"Task3 test 2 {white.Task3(2, 15.1) == 1}");
+            Console.WriteLine($"Task3 test 3. Paste 5 inputs");
+            Console.WriteLine($"Task3 test 3 {white.Task3(5, 15.1) == 3}");
+            Console.WriteLine($"Task3 test 4. Paste 10 inputs");
+            Console.WriteLine($"Task3 test 4 {white.Task3(10, 15.1) == 7}");
+            Console.WriteLine($"Task3 test 5. Paste 10 inputs");
+            Console.WriteLine($"Task3 test 5 {white.Task3(10, 14.5) == 5}");
+
+            Console.WriteLine($"Task4 test 1. Paste 7");
+            Console.WriteLine($"Task4 test 1 {white.Task4(0) == 0}");
+            Console.WriteLine($"Task4 test 2. Paste 7");
+            Console.WriteLine($"Task4 test 2 {white.Task4(5) == 0}");
+            Console.WriteLine($"Task4 test 3. Paste 7");
+            Console.WriteLine($"Task4 test 3 {white.Task4(10) == 3}");
+            Console.WriteLine($"Task4 test 4. Paste 7");
+            Console.WriteLine($"Task4 test 4 {white.Task4(20) == 28}");
+            Console.WriteLine($"Task4 test 5. Paste 7");
+            Console.WriteLine($"Task4 test 5 {white.Task4(50) == 103}");
         }
         private static void TestGreen()
         {
