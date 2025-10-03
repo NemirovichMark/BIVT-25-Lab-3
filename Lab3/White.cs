@@ -15,9 +15,9 @@ namespace Lab3
             for (int i = 0; i < n; i++)
             {
                 double heigh = double.Parse(Console.ReadLine());
-                sum+=heigh;
+                sum += heigh;
             }
-            if (n>0)
+            if (n > 0)
                 averageHeight = sum / n;
             else averageHeight = 0;
             // end
@@ -32,11 +32,11 @@ namespace Lab3
             for (int i = 0; i < n; i++)
             {
                 double.TryParse(Console.ReadLine(), out double t);
-                if (i==0 || t<bestResult)
+                if (i == 0 || t < bestResult)
                 {
                     bestResult = t;
                 }
-                   
+
             }
             // end
 
@@ -50,7 +50,8 @@ namespace Lab3
             for (int i = 0; i < n; i++)
             {
                 double.TryParse(Console.ReadLine(), out double s);
-                if (s <= limit) {
+                if (s <= limit)
+                {
                     count++;
                 }
             }
@@ -64,8 +65,10 @@ namespace Lab3
 
             // code here
             int amount = int.Parse(Console.ReadLine());
-            while (amount < maxAmount) {
-                if (hours % 5 != 4) {
+            while (amount < maxAmount)
+            {
+                if (hours % 5 != 4)
+                {
                     amount++;
                 }
                 else
@@ -85,12 +88,17 @@ namespace Lab3
             double area = 0;
 
             // code here
-            switch (type) { 
+            switch (type)
+            {
                 case 1:
                     area = r * r; break;
                 case 2:
-                    area = double.Pi*r*r; break;
+                    area = double.Pi * r * r; break;
                 case 3:
-                    area = Math.Sqrt(3)/4*r*r; break;
+                    area = Math.Sqrt(3) / 4 * r * r; break;
 
             }
+            return area;
+        }
+    }
+}
