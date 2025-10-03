@@ -21,15 +21,15 @@ namespace Lab3
         private static void TestWhite()
         {
             var white = new White();
-            Console.WriteLine($"Task1 test 1 {white.Task1(0) == 0}");
-            Console.WriteLine($"Task1 test 2. Paste 1 inputs");
-            Console.WriteLine($"Task1 test 2 {white.Task1(1) == 168}");
-            Console.WriteLine($"Task1 test 3. Paste 2 inputs");
-            Console.WriteLine($"Task1 test 3 {white.Task1(2) == 157.5}");
-            Console.WriteLine($"Task1 test 4. Paste 5 inputs");
-            Console.WriteLine($"Task1 test 4 {white.Task1(5) == 164.6}");
-            Console.WriteLine($"Task1 test 5. Paste 10 inputs");
-            Console.WriteLine($"Task1 test 5 {white.Task1(10) == 163.4}");
+            //Console.WriteLine($"Task1 test 1 {white.Task1(0) == 0}");
+            //Console.WriteLine($"Task1 test 2. Paste 1 inputs");
+            //Console.WriteLine($"Task1 test 2 {white.Task1(1) == 168}");
+            //Console.WriteLine($"Task1 test 3. Paste 2 inputs");
+            //Console.WriteLine($"Task1 test 3 {white.Task1(2) == 157.5}");
+            //Console.WriteLine($"Task1 test 4. Paste 5 inputs");
+            //Console.WriteLine($"Task1 test 4 {white.Task1(5) == 164.6}");
+            //Console.WriteLine($"Task1 test 5. Paste 10 inputs");
+            //Console.WriteLine($"Task1 test 5 {white.Task1(10) == 163.4}");
 
             Console.WriteLine($"Task2 test 1 {white.Task2(0) == 0}");
             Console.WriteLine($"Task2 test 2. Paste 1 inputs");

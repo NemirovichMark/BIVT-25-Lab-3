@@ -9,17 +9,22 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-            
-            for (int i = 0; i < n; i++)
+
+            double s = 0;
+            if (n > 0)
             {
-                int.TryParse(Console.ReadLine(), out int height);
-                averageHeight += height;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    int.TryParse(Console.ReadLine(), out int a);
+                    s += a;
+                }
+                averageHeight = s / n;
+
+                // end
+
+                return averageHeight;
             }
-            averageHeight /= n;
-
-            // end
-
-            return averageHeight;
         }
         public double Task2(int n)
         {
@@ -63,17 +68,21 @@ namespace Lab3
             int hours = 0;
 
             // code here
-            int.TryParse(Console.ReadLine(), out int hour);
+            int amount = 0;
+            int.TryParse(Console.ReadLine(), out amount);
             while (amount < maxAmount)
             {
                 if (hours % 5 != 4)
                 {
                     amount += 1;
-                    hours++;
                 }
-                amount -= 2;
+                else
+                {
+                    amount -= 2;
+                }
                 hours++;
             }
+        
 
             // end
 
@@ -84,20 +93,19 @@ namespace Lab3
             double area = 0;
 
             // code here
-            double s1 = r * r;
-            double s2 = Math.PI * (r * r);
-            double s3 = (Math.Sqrt(3) * (r * r)) / 4;
-            switch (type)
+
+            
+            if (type == 1)
             {
-                case 1:
-                    area = s1;
-                    break;
-                case 2:
-                    area = s2;
-                    break;
-                case 3:
-                    area = s3;
-                    break;
+                area = r * r;
+            }
+            else if (type == 2)
+            {
+                area = Math.PI * r * r;
+            }
+            else if (type == 3)
+            {
+                area = 0.86602540378 * 0.5 * r * r;
             }
             // end
 
