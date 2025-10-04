@@ -1,6 +1,4 @@
 using System;
-using System.ComponentModel;
-using System.Net.Http.Headers;
 
 namespace Lab3
 {
@@ -11,15 +9,13 @@ namespace Lab3
             int count = 0;
 
             // code here
-            int i = 0;
-            while (i < n)
+            for (int i = 0; i < n; i++)
             {
-                double x = Convert.ToDouble(Console.ReadLine());
-                double y = Convert.ToDouble(Console.ReadLine());
-                double r = x * x + y * y;
-                if (r >= r1 * r1 && r <= r2 * r2)
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                double dist = x * x + y * y;
+                if (dist >= r1 * r1 && dist <= r2 * r2)
                     count++;
-                i++;
             }
             // end
 
@@ -28,30 +24,29 @@ namespace Lab3
 
         public (int count, double average) Task2(int n)
         {
-            int badCount = 0;
-            double total = 0;
+            int count = 0;
+            double totalSum = 0;
+            int totalMarks = 0;
 
             // code here
-            int student = 0;
-            while (student < n)
+            for (int i = 0; i < n; i++)
             {
-                int[] marks = new int[4];
-                for (int j = 0; j < 4; j++)
-                    marks[j] = int.Parse(Console.ReadLine());
+                int a1 = int.Parse(Console.ReadLine());
+                int a2 = int.Parse(Console.ReadLine());
+                int a3 = int.Parse(Console.ReadLine());
+                int a4 = int.Parse(Console.ReadLine());
 
-                bool hasTwo = false;
-                for (int j = 0; j < 4; j++)
-                {
-                    total += marks[j];
-                    if (marks[j] == 2) hasTwo = true;
-                }
-                if (hasTwo) badCount++;
-                student++;
+                totalSum += a1 + a2 + a3 + a4;
+                totalMarks += 4;
+
+                if (a1 == 2 || a2 == 2 || a3 == 2 || a4 == 2)
+                    count++;
             }
-            double avg = total / (n * 4);
+
+            double average = totalSum / totalMarks;
             // end
 
-            return (badCount, avg);
+            return (count, average);
         }
 
         public double Task3(int exams)
@@ -59,22 +54,23 @@ namespace Lab3
             double avgMark = 0;
 
             // code here
-            double totalMark = 0;
+            double sum = 0;
             for (int i = 0; i < exams; i++)
             {
-                double theory = Convert.ToDouble(Console.ReadLine());
-                double practice = Convert.ToDouble(Console.ReadLine());
-                double result = theory * 0.4 + practice * 0.6;
+                double theory = double.Parse(Console.ReadLine());
+                double practice = double.Parse(Console.ReadLine());
+                double score = 0.4 * theory + 0.6 * practice;
 
-                double grade;
-                if (result > 85) grade = 5;
-                else if (result > 70) grade = 4;
-                else if (result > 50) grade = 3;
-                else grade = 2;
-
-                totalMark += grade;
+                if (score > 85)
+                    sum += 5;
+                else if (score > 70)
+                    sum += 4;
+                else if (score > 50)
+                    sum += 3;
+                else
+                    sum += 2;
             }
-            avgMark = totalMark / exams;
+            avgMark = sum / exams;
             // end
 
             return avgMark;
@@ -86,41 +82,41 @@ namespace Lab3
             int attempts = 0;
 
             // code here
-            int c1 = code / 100;
-            int c2 = (code / 10) % 10;
-            int c3 = code % 10;
+            int b1 = code / 100;
+            int b2 = (code / 10) % 10;
+            int b3 = code % 10;
 
             while (attempts < limit)
             {
-                int x1 = int.Parse(Console.ReadLine());
-                if (x1 == -1)
+                int a1 = int.Parse(Console.ReadLine());
+                if (a1 == -1)
                 {
                     solution = "Аварийный выход!";
                     break;
                 }
-                int x2 = int.Parse(Console.ReadLine());
-                if (x2 == -1)
+                int a2 = int.Parse(Console.ReadLine());
+                if (a2 == -1)
                 {
                     solution = "Аварийный выход!";
                     break;
                 }
-                int x3 = int.Parse(Console.ReadLine());
-                if (x3 == -1)
+                int a3 = int.Parse(Console.ReadLine());
+                if (a3 == -1)
                 {
                     solution = "Аварийный выход!";
-                    break;
-                }
-
-                if (x1 == c1 && x2 == c2 && x3 == c3)
-                {
-                    solution = "Доступ разрешен!";
                     break;
                 }
 
                 attempts++;
+
+                if (a1 == b1 && a2 == b2 && a3 == b3)
+                {
+                    solution = "Доступ разрешен!";
+                    break;
+                }
             }
 
-            if (solution == "Код не подобран")
+            if (solution == "Код не подобран" && attempts >= limit)
                 solution = "Система заблокирована!";
             // end
 
@@ -132,26 +128,23 @@ namespace Lab3
             double luck = 0;
 
             // code here
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 int b = (a + i - 1) % 29 + 1;
 
-                // first apply base increase
+                // base increment
                 luck = Math.Min(luck + 5, 100);
 
-                // then handle special cases
+                // modifiers
                 if (b == 4 || b == 11 || b == 18 || b == 25)
-                {
                     luck = Math.Max(luck - 10, 0);
-                }
                 else if (b == 7 || b == 14 || b == 21 || b == 28)
                 {
-                    if (luck < 50) luck = 55;
+                    if (luck < 50)
+                        luck = 55;
                 }
                 else if (b == 1 || b == 8 || b == 15 || b == 22 || b == 29)
-                {
                     luck = Math.Min(luck * 1.5, 100);
-                }
             }
             // end
 
