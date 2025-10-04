@@ -134,25 +134,23 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                int num = (a + i - 1) % 29 + 1;
+                int b = (a + i - 1) % 29 + 1;
 
-                if (num % 7 == 0)
-                {
-                    if (luck < 50) luck = 55;
-                    continue;
-                }
+                // first apply base increase
+                luck = Math.Min(luck + 5, 100);
 
-                if (num % 7 == 4)
+                // then handle special cases
+                if (b == 4 || b == 11 || b == 18 || b == 25)
                 {
                     luck = Math.Max(luck - 10, 0);
                 }
-                else if (num % 7 == 1)
+                else if (b == 7 || b == 14 || b == 21 || b == 28)
+                {
+                    if (luck < 50) luck = 55;
+                }
+                else if (b == 1 || b == 8 || b == 15 || b == 22 || b == 29)
                 {
                     luck = Math.Min(luck * 1.5, 100);
-                }
-                else
-                {
-                    luck = Math.Min(luck + 5, 100);
                 }
             }
             // end
