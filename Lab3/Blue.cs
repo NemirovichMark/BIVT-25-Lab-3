@@ -1,10 +1,10 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Blue
     {
         public double Task1(int n, int glass, int norma)
         {
-            double milk = 0.0;
+            double milk = 0;
 
             // code here
             for (int i = 0; i < n; i++)
@@ -118,7 +118,7 @@
             if (intellect < 0) intellect = 0;
             // end
 
-                return (power, agility, intellect);
+            return (power, agility, intellect);
         }
     }
 }
