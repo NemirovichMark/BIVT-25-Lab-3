@@ -23,7 +23,7 @@ namespace Lab3
             // end
 
             return averageHeight;
-            }
+            
         }
         public double Task2(int n)
         {
