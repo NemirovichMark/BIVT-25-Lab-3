@@ -10,20 +10,19 @@ namespace Lab3
 
             // code here
 
-            double s = 0;
-            if (n > 0)
+            double sum = 0;
+            for (int i = 0; i < n; i++)
             {
+                double heigh = double.Parse(Console.ReadLine());
+                sum += heigh;
+            }
+            if (n > 0)
+                averageHeight = sum / n;
+            else averageHeight = 0;
 
-                for (int i = 1; i <= n; i++)
-                {
-                    int.TryParse(Console.ReadLine(), out int a);
-                    s += a;
-                }
-                averageHeight = s / n;
+            // end
 
-                // end
-
-                return averageHeight;
+            return averageHeight;
             }
         }
         public double Task2(int n)
@@ -53,8 +52,8 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                double.TryParse(Console.ReadLine(), out double limit1);
-                if (limit1 <= limit)
+                double.TryParse(Console.ReadLine(), out double s);
+                if (s <= limit)
                 {
                     count++;
                 }
