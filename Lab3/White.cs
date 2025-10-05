@@ -10,10 +10,10 @@ namespace Lab3
             // code here
             double r, s = 0;
             int i = 0;
-            for(; ; i++)
+            for (; ; i++)
             {
-                double.TryParse(Console.Readline(), out r);
-                if (r <= 0) break
+                double.TryParse(Console.ReadLine(), out r);
+                if (r <= 0) break;
                 s = s + r;
             }
             averageHeight = s / n;
@@ -36,7 +36,8 @@ namespace Lab3
         {
             double bestResult = 0;
             // code here
-            bestResult = double. MaxValue;
+            bestResult = double.MaxValue;
+
             for (int i = 0; i < n; i++)
             {
                 double time = double.Parse(Console.ReadLine());
@@ -140,7 +141,7 @@ namespace Lab3
                     area = (Math.Sqrt(3) / 4) * r * r;
                     break;
                 default:
-                    Console.WriteLine("неверный выбор");
+                    Console.WriteLine("Неверный выбор. Выберите 1, 2 или 3:");
                     break;
             }
 
@@ -151,3 +152,4 @@ namespace Lab3
     }
 
 }
+
