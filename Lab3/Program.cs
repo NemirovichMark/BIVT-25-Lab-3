@@ -6,7 +6,7 @@ namespace Lab3
     {
         public static void Main()
         {
-            // CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
             // CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
             // Console.WriteLine("\nTest white league\n");
@@ -15,8 +15,8 @@ namespace Lab3
             // TestGreen();
             // Console.WriteLine("\nTest blue league\n");
             // TestBlue();
-            // Console.WriteLine("\nTest purple league\n");
-            // TestPurple();
+            Console.WriteLine("\nTest purple league\n");
+            TestPurple();
         }
         private static void TestWhite()
         {
