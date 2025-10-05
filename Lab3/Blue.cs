@@ -17,10 +17,8 @@
                     milk += glass;
                 }
             }
-            
-   
-    return milk / 1000;
-}
+            return milk / 1000;
+        }
 
         public (int first, int second, int third, int fourth) Task2(int n)
         {
@@ -111,9 +109,8 @@
                     break;
                 }
             }
-            
             return (tasks, serias)
-            }
+        }
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
             
@@ -163,3 +160,4 @@
     }
 
 }
+
