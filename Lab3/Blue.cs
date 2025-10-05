@@ -42,13 +42,9 @@ namespace Lab3
 
             // code here
             for (int i = 1; i <= n; i++){
-                Console.WriteLine("1 mark : ");
                 a=Convert.ToInt16(Console.ReadLine());
-                Console.WriteLine("2 mark : ");
                 b=Convert.ToInt16(Console.ReadLine());
-                Console.WriteLine("3 mark : ");
                 c=Convert.ToInt16(Console.ReadLine());
-                Console.WriteLine("4 mark : ");
                 d=Convert.ToInt16(Console.ReadLine());
                 if (a > 3 && b > 3 && c > 3 && d > 3) count++;
             }
@@ -91,6 +87,7 @@ namespace Lab3
                 case 2:
                     agility += 5;
                     power -= 5;
+                    intellect -= 5;
                     break;
                 case 4:
                     agility += 15;
@@ -101,7 +98,10 @@ namespace Lab3
                     intellect += 7;
                     power -= 5;
                     break;
-            }   
+            }
+            if (power < 0) power = 0;
+            if (agility < 0) agility = 0;
+            if (intellect < 0) intellect = 0;
             // end
 
             return (power, agility, intellect);
