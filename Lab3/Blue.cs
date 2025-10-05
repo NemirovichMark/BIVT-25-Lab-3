@@ -108,6 +108,7 @@
                     break;
                 case 2:
                     agility += 5;
+                    intellect -= 5;
                     power -= 5;
                     break;
                 case 3:
