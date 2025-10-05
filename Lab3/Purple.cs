@@ -1,4 +1,4 @@
-﻿using System.Net.Http.Headers;
+using System.Net.Http.Headers;
 
 namespace Lab3
 {
@@ -6,32 +6,110 @@ namespace Lab3
     {
         public int Task1(int n, int r1, int r2)
         {
+            if (n <= 0) return 0;
+
+            int inner = Math.Min(r1, r2);
+            int outer = Math.Max(r1, r2);
+            double innerSq = (double)inner * inner;
+            double outerSq = (double)outer * outer;
+
             int count = 0;
+            for (int i = 0; i < n; ++i)
+            {
+                if (!double.TryParse(Console.ReadLine(), out double x))
+                {
+                    break;
+                }
 
-            // code here
+                if (!double.TryParse(Console.ReadLine(), out double y))
+                {
+                    break;
+                }
 
-            // end
+                double distSq = x * x + y * y;
+                if (distSq >= innerSq && distSq <= outerSq)
+                {
+                    count++;
+                }
+            }
 
             return count;
         }
         public (int count, double average) Task2(int n)
         {
-            int count = 0;
-            double average = 0;
+            if (n <= 0)
+            {
+                return (0, 0);
+            }
 
-            // code here
+            int totalMarksSum = 0;
+            int studentsWithTwoMarks = 0;
 
-            // end
+            for (int studentId = 0; studentId < n; ++studentId)
+            {
+                int hasTwoMark = 0;
+                int studentMarksSum = 0;
+                for (int markId = 0; markId < 4; ++markId)
+                {
+                    string? studentMarks = Console.ReadLine();
+                    if (studentMarks == null || !int.TryParse(studentMarks, out int mark))
+                    {
+                        return (0, 0); // пусть так, в условии весь ввод валидный
+                    }
 
-            return (count, average);
+                    studentMarksSum += mark;
+                    hasTwoMark |= Convert.ToInt32(mark == 2);
+                }
+
+                totalMarksSum += studentMarksSum;
+                studentsWithTwoMarks += hasTwoMark;
+            }
+            return (studentsWithTwoMarks, totalMarksSum / (double)n);
         }
         public double Task3(int exams)
         {
             double avgMark = 0;
+            if (exams <= 0)
+            {
+                return 0;
+            }
 
-            // code here
+            int n = exams;
 
-            // end
+            for (int i = 0; i < n; i++)
+            {
+                if (!int.TryParse(Console.ReadLine(), out int theory))
+                {
+                    break;
+                }
+
+                if (!int.TryParse(Console.ReadLine(), out int practice))
+                {
+                    break;
+                }
+
+                double score = 0.4 * theory + 0.6 * practice;
+
+                int mark;
+                if (score > 85)
+                {
+                    mark = 5;
+                }
+                else if (score > 70)
+                {
+                    mark = 4;
+                }
+                else if (score > 50)
+                {
+                    mark = 3;
+                }
+                else
+                {
+                    mark = 2;
+                }
+
+                avgMark += (double)mark / n;
+            }
 
             return avgMark;
         }
@@ -40,9 +118,50 @@ namespace Lab3
             string solution = "Код не подобран";
             int attempts = 0;
 
-            // code here
+            for (int i = 0; i < limit; ++i)
+            {
+                attempts++;
 
-            // end
+                if (!int.TryParse(Console.ReadLine(), out int d1))
+                {
+                    break;
+                }
+                if (d1 == -1)
+                {
+                    solution = "Аварийный выход!";
+                    break;
+                }
+
+                if (!int.TryParse(Console.ReadLine(), out int d2))
+                {
+                    break;
+                }
+                if (d2 == -1)
+                {
+                    solution = "Аварийный выход!";
+                    break;
+                }
+
+                if (!int.TryParse(Console.ReadLine(), out int d3)) break;
+                if (d3 == -1)
+                {
+                    solution = "Аварийный выход!";
+                    break;
+                }
+
+                int guessedCode = d1 * 100 + d2 * 10 + d3;
+
+                if (guessedCode == code)
+                {
+                    solution = "Доступ разрешен!";
+                    break;
+                }
+            }
+
+            if (solution == "Код не подобран")
+            {
+                solution = "Система заблокирована!";
+            }
 
             return (solution, attempts);
         }
@@ -50,9 +169,42 @@ namespace Lab3
         {
             double luck = 0;
 
-            // code here
+            for (int i = 0; i < n; i++)
+            {
+                int currentDay = a + i;
 
-            // end
+                switch (currentDay)
+                {
+                    case 1:
+                    case 8:
+                    case 15:
+                    case 22:
+                    case 29:
+                        luck = double.Min(100, luck * 1.5);
+                        break;
+                    
+                    case 4:
+                    case 11:
+                    case 18:
+                    case 25:
+                        luck = double.Max(0, luck - 10);
+                        break;
+                    
+                    case 7:
+                    case 14:
+                    case 21:
+                    case 28:
+                        if (luck < 50)
+                        {
+                            luck = 55;
+                        }
+                        break;
+                    
+                    default:
+                        luck = double.Min(100, luck + 5);
+                        break;
+                }
+            }
 
             return luck;
         }
