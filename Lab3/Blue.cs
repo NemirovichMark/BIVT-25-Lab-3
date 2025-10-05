@@ -11,12 +11,11 @@ namespace Lab3
                 double weight = Convert.ToDouble(Console.ReadLine());
 
                 if (weight < norma)
-                    milk += 2 * glass;
-                else
                     milk += glass;
             }
+            Console.WriteLine(milk / 1000);
 
-            return milk;
+            return milk / 1000;
         }
         public (int first, int second, int third, int fourth) Task2(int n)
         {
@@ -74,7 +73,7 @@ namespace Lab3
                 else
                 {
                     seriasTime = Convert.ToInt32(Console.ReadLine());
-                    taskTime += seriasTime;
+                    time += seriasTime;
                     serias++;
                 }
             }
@@ -85,8 +84,10 @@ namespace Lab3
         {
             if (number == 1 || number == 3)
                 power += 10;
-            if (number == 2 || number == 4)
-                agility = number == 2 ? agility += 5 : agility += 15;
+            if (number == 2)
+                agility += 5;
+            if (number == 4)
+                agility += 15;
             if (number == 5)
                 intellect += 7;
 
@@ -100,14 +101,12 @@ namespace Lab3
                 intellect -= 10;
             }
 
-            if (number < 0)
-                number = 0;
-            if (agility < 0)
-                agility = 0;
-            if (intellect < 0)
-                intellect = 0;
+            power = Math.Max(power, 0);
+            agility = Math.Max(agility, 0);
+            intellect = Math.Max(intellect, 0);
 
             return (power, agility, intellect);
         }
+
     }
 }
