@@ -26,7 +26,16 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
-
+            bestResult = 1000000;
+            for (int i = 1; i <= n; i++)
+            {
+                double h;
+                double.TryParse(Console.ReadLine(), out h);
+                if (h < bestResult)
+                {
+                    bestResult = h;
+                }
+            }
             // end
 
             return bestResult;
@@ -83,3 +92,4 @@ namespace Lab3
         }
     }
 }
+
