@@ -41,6 +41,7 @@
                 // end
 
                 return (first, second, third, fourth);
+            }
         }
         public int Task3(int n)
         {
