@@ -100,10 +100,48 @@ namespace Lab3
         {
 
             // code here
-
+            switch (number)
+            {
+                case 1:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 2:
+                    agility += 5;
+                    power -= 5;
+                    intellect -= 5;
+                    break;
+                case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 4:
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+                case 5:
+                    intellect += 7;
+                    power -= 5;
+                    break;
+            }
+            
+            if (power < 0)
+            {
+                power = 0;
+            }
+            if (agility < 0)
+            {
+                agility = 0;
+            }
+            if (intellect < 0)
+            {
+                intellect = 0;
+            }
             // end
 
             return (power, agility, intellect);
         }
     }
 }
+
