@@ -61,8 +61,8 @@
             {
                 string x = Console.ReadLine();
                 string y = Console.ReadLine();
-                bool xtrue=double.TryParse(x, out double X);
-                bool ytrue=double.TryParse(y, out double Y);
+                double.TryParse(x, out double X);
+                double.TryParse(y, out double Y);
                 if (Y >= 0 && Y <= Math.Sin(X) && X >= 0 && X <= Math.PI)
                 {
                     count++;
@@ -80,7 +80,20 @@
             int score = 0;
 
             // code here
-
+            while (labs > 0 || cw > 0)
+            {
+                int.TryParse(Console.ReadLine(), out int mark);
+                if (labs > 0)
+                {
+                    score += mark;
+                    labs--;
+                }
+                else
+                {
+                    score += 4 * mark;
+                    cw--;
+                }
+            }
             // end
 
             return score;
@@ -90,7 +103,23 @@
             double area = 0;
 
             // code here
+            switch (type)
+            {
+                case 1:
+                    area = a * b;
+                    break;
+                case 2:
+                    area = Math.PI * Math.Abs(a * a - b * b);
+                    break;
+                case 3:
+                    double p = (double)(a + b + b) / 2;
+                    area = Math.Sqrt(p * (p - a) * (p - b) * (p - b));
+                    break;
+                default:
+                    area = 0;
+                    break;
 
+            }
             // end
 
             return area;
