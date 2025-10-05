@@ -39,9 +39,9 @@
                 else if (x > 0 && y < 0)
                     fourth++;
                 // end
-
-                return (first, second, third, fourth);
             }
+
+            return (first, second, third, fourth);
         }
         public int Task3(int n)
         {
