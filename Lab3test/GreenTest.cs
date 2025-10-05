@@ -21,6 +21,7 @@
             for (int i = 0; i < answer.Length; i++)
             {
                 test[i] = _main.Task5(input[0, i], input[1, i], input[2, i]);
+                Console.WriteLine(test[i]);
             }
             // Assert
             for (int i = 0; i < answer.Length; i++)
