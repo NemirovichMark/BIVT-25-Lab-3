@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Lab3
 {
@@ -9,7 +9,17 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-
+            double sum = 0;
+            double r;
+            for (int i = 1; i <= n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out r); 
+                sum += r;
+            }
+            
+            averageHeight = sum/n;
+            Console.WriteLine(averageHeight);
+           
             // end
 
             return averageHeight;
@@ -19,7 +29,18 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
-
+            double min;
+            double r;
+            double.TryParse(Console.ReadLine(), out min);
+            for (int i = 1; i<n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out r);
+                if (r<min)
+                {
+                    min= r;
+                }
+            }
+            bestResult = min;
             // end
 
             return bestResult;
@@ -29,7 +50,15 @@ namespace Lab3
             int count = 0;
 
             // code here
-
+            double time;
+            for (int i = 1; i <= n; i++)
+            {
+                double.TryParse(Console.ReadLine(), out time);
+                if (time <= limit)
+                {
+                    count += 1;
+                }
+            }
             // end
 
             return count;
@@ -39,6 +68,20 @@ namespace Lab3
             int hours = 0;
 
             // code here
+            int amount = 0;
+            int.TryParse(Console.ReadLine(), out amount);
+            while (amount < maxAmount)
+            {
+                if ((hours % 5)!= 4)
+                {
+                    amount+=1;
+                }
+                else
+                {
+                    amount -= 2;
+                }
+                hours++;
+            }
 
             // end
 
@@ -49,10 +92,21 @@ namespace Lab3
             double area = 0;
 
             // code here
+            if (type == 1)
+            {
+                area = r * r;
+            }
+            else if (type == 2)
+            {
+                area = Math.PI * r * r;
+            }
+            else if (type == 3)
+            {
+                area = (Math.Sqrt(3) / 4) * r * r;
+            }
+                    // end
 
-            // end
-
-            return area;
+                    return area;
         }
     }
 }
