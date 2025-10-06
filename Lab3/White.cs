@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Lab3
 {
@@ -9,7 +9,14 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
-
+            double answer = 0;
+            for (int i = 1;i <=n; i = i + 1)
+            {
+                double height;
+                double.TryParse(Console.ReadLine(), out height);
+                answer += height;
+            }
+            averageHeight = answer / n;
             // end
 
             return averageHeight;
@@ -19,7 +26,16 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
-
+            bestResult = 1000000;
+            for (int i = 1; i <= n; i++)
+            {
+                double h;
+                double.TryParse(Console.ReadLine(), out h);
+                if (h < bestResult)
+                {
+                    bestResult = h;
+                }
+            }
             // end
 
             return bestResult;
@@ -29,8 +45,14 @@ namespace Lab3
             int count = 0;
 
             // code here
-
-            // end
+            for (int i = 0; i < n; i=i+1)
+            {
+                double time = double.Parse(Console.ReadLine());
+                if (time <= limit)
+                {
+                    count=count+1;
+                }
+            }
 
             return count;
         }
@@ -39,7 +61,10 @@ namespace Lab3
             int hours = 0;
 
             // code here
-
+            for (int i = 1; i <= maxAmount; i=i+1)
+            {
+                hours += i;
+            }
             // end
 
             return hours;
@@ -49,10 +74,22 @@ namespace Lab3
             double area = 0;
 
             // code here
-
+            if (type == 1)
+            {
+                area = r * r;
+            }
+            else if (type == 2)
+            {
+                area = Math.PI * (r * r);
+            }
+            if (type == 3)
+            {
+                area = ((r * r) * Math.Sqrt(3)) / 4;
+            }
             // end
 
             return area;
         }
     }
 }
+
