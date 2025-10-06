@@ -65,6 +65,7 @@ namespace Lab3
 
             return count;
         }
+
         public int Task4(int labs, int cw)
         {
             int score = 0;
@@ -89,6 +90,7 @@ namespace Lab3
 
             return score;
         }
+
         public double Task5(int a, int b, int type)
         {
             double area = 0;
