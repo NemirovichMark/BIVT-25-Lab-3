@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\BIVT-25-Lab-3\\Lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|c:\\bivt-25-lab-3\\lab3\\purple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|solutionrelative:purple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|c:\\bivt-25-lab-3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A50F7A4-B48C-34BE-4D3E-477C70A05454}|..\\Lab3test\\Lab3test.csproj|c:\\bivt-25-lab-3\\lab3test\\lab3test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A50F7A4-B48C-34BE-4D3E-477C70A05454}|..\\Lab3test\\Lab3test.csproj|c:\\bivt-25-lab-3\\lab3test\\purpletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A50F7A4-B48C-34BE-4D3E-477C70A05454}|..\\Lab3test\\Lab3test.csproj|c:\\bivt-25-lab-3\\lab3test\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\BIVT-25-Lab-2-Thu\\Lab2test\\PurpleTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|c:\\bivt-25-lab-3\\lab3\\lab3.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FECD1CD4-88DC-72AD-795E-CB2D0849440D}|Lab3.csproj|solutionrelative:lab3.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:53:28.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Lab3test",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3test\\Lab3test.csproj",
+              "RelativeDocumentMoniker": "..\\Lab3test\\Lab3test.csproj",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3test\\Lab3test.csproj",
+              "RelativeToolTip": "..\\Lab3test\\Lab3test.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-05T18:33:19.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MSTestSettings.cs",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3test\\MSTestSettings.cs",
+              "RelativeDocumentMoniker": "..\\Lab3test\\MSTestSettings.cs",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3test\\MSTestSettings.cs",
+              "RelativeToolTip": "..\\Lab3test\\MSTestSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:07:34.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Purple.cs",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3\\Purple.cs",
+              "RelativeDocumentMoniker": "Purple.cs",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3\\Purple.cs",
+              "RelativeToolTip": "Purple.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAkwDcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T22:56:39.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PurpleTest.cs",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-2-Thu\\Lab2test\\PurpleTest.cs",
+              "RelativeDocumentMoniker": "..\\..\\BIVT-25-Lab-2-Thu\\Lab2test\\PurpleTest.cs",
+              "ToolTip": "C:\\BIVT-25-Lab-2-Thu\\Lab2test\\PurpleTest.cs",
+              "RelativeToolTip": "..\\..\\BIVT-25-Lab-2-Thu\\Lab2test\\PurpleTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T15:46:12.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PurpleTest.cs",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3test\\PurpleTest.cs",
+              "RelativeDocumentMoniker": "..\\Lab3test\\PurpleTest.cs",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3test\\PurpleTest.cs",
+              "RelativeToolTip": "..\\Lab3test\\PurpleTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T15:45:58.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Lab3.csproj",
+              "DocumentMoniker": "C:\\BIVT-25-Lab-3\\Lab3\\Lab3.csproj",
+              "RelativeDocumentMoniker": "Lab3.csproj",
+              "ToolTip": "C:\\BIVT-25-Lab-3\\Lab3\\Lab3.csproj",
+              "RelativeToolTip": "Lab3.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-02T22:56:27.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
