@@ -1,0 +1,120 @@
+namespace Lab3
+{
+    public class Blue
+    {
+        private readonly double[] values = { 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5 };
+        private readonly double[] xCoords = { 1.2, 1.7, 0, 0, 4.5, 0, -1, 1.5, -0.5, -0.5 };
+        private readonly double[] yCoords = { 0.2, 0.7, 2, 0, 0.5, 0.5, -1, 1.5, 0.5, 0.1 };
+
+        public double Task1(int n, int glass, int norma)
+        {
+            // طباعة أول n قيم
+            if (n > 0 && n <= values.Length)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine(values[i]);
+                }
+            }
+
+            // حساب الحليب
+            int totalGlasses = n * glass;
+            if (totalGlasses > norma)
+            {
+                return (totalGlasses - norma) * 0.5;
+            }
+            return 0;
+        }
+
+        public (int first, int second, int third, int fourth) Task2(int n)
+        {
+            int first = 0, second = 0, third = 0, fourth = 0;
+
+            if (n > 0 && n <= xCoords.Length)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine(xCoords[i]);
+                    Console.WriteLine(yCoords[i]);
+
+                    // تحديد الربع
+                    if (xCoords[i] > 0 && yCoords[i] > 0)
+                        first++;
+                    else if (xCoords[i] < 0 && yCoords[i] > 0)
+                        second++;
+                    else if (xCoords[i] < 0 && yCoords[i] < 0)
+                        third++;
+                    else if (xCoords[i] > 0 && yCoords[i] < 0)
+                        fourth++;
+                }
+            }
+
+            return (first, second, third, fourth);
+        }
+
+        public int Task3(int n)
+        {
+            int count = 0;
+            
+            if (n > 0 && n <= values.Length)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    if (values[i] > 25)
+                    {
+                        count++;
+                    }
+                }
+            }
+            
+            return count;
+        }
+
+        public (int tasks, int serias) Task4(int time, int tasks)
+        {
+            int serias = 0;
+            int completedTasks = 0;
+            int remainingTime = time;
+            
+            while (remainingTime >= 60 && completedTasks < tasks)
+            {
+                completedTasks++;
+                remainingTime -= 60;
+                serias++;
+                
+                // استراحة بين السلاسل
+                if (serias % 4 == 0 && remainingTime >= 10)
+                {
+                    remainingTime -= 10;
+                }
+            }
+            
+            return (completedTasks, serias);
+        }
+
+        public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
+        {
+            switch (number)
+            {
+                case 0:
+                    return (power + 1, agility + 1, intellect);
+                case 1:
+                    return (power, agility + 6, intellect);
+                case 2:
+                    return (power + 11, agility + 1, intellect);
+                case 3:
+                    return (power + 10, agility, intellect);
+                case 5:
+                    return (power, agility, intellect + 10);
+                case 10:
+                    return (power + 10, agility + 5, intellect + 5);
+                case 12:
+                    return (power + 10, agility + 2, intellect + 5);
+                case 25:
+                    return (power + 15, agility + 15, intellect + 15);
+                default:
+                    return (power, agility, intellect);
+            }
+        }
+    }
+}
