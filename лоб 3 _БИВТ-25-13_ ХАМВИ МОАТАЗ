@@ -10,42 +10,36 @@ namespace Lab3
 
         public double Task1(int n, int glass, int norma)
         {
-            // طباعة أول n قيم من القائمة الأولى
-            if (n > 0 && n <= values.Length)
+            // طباعة أول n قيم
+            for (int i = 0; i < n && i < values.Length; i++)
             {
-                for (int i = 0; i < n; i++)
-                {
-                    Console.WriteLine(values[i]);
-                }
+                Console.WriteLine(values[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
             }
 
             // حساب الحليب
             int totalGlasses = n * glass;
-            return totalGlasses > norma ? (totalGlasses - norma) * 0.5 : 0;
+            double milk = totalGlasses > norma ? (totalGlasses - norma) * 0.5 : 0;
+            return milk;
         }
 
         public (int first, int second, int third, int fourth) Task2(int n)
         {
             int first = 0, second = 0, third = 0, fourth = 0;
 
-            if (n > 0 && n <= xCoords.Length)
+            for (int i = 0; i < n && i < xCoords.Length; i++)
             {
-                for (int i = 0; i < n; i++)
-                {
-                    // طباعة الإحداثيات
-                    Console.WriteLine(xCoords[i]);
-                    Console.WriteLine(yCoords[i]);
+                Console.WriteLine(xCoords[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
+                Console.WriteLine(yCoords[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
 
-                    // تحديد الربع
-                    if (xCoords[i] > 0 && yCoords[i] > 0)
-                        first++;
-                    else if (xCoords[i] < 0 && yCoords[i] > 0)
-                        second++;
-                    else if (xCoords[i] < 0 && yCoords[i] < 0)
-                        third++;
-                    else if (xCoords[i] > 0 && yCoords[i] < 0)
-                        fourth++;
-                }
+                // تحديد الربع
+                if (xCoords[i] > 0 && yCoords[i] > 0)
+                    first++;
+                else if (xCoords[i] < 0 && yCoords[i] > 0)
+                    second++;
+                else if (xCoords[i] < 0 && yCoords[i] < 0)
+                    third++;
+                else if (xCoords[i] > 0 && yCoords[i] < 0)
+                    fourth++;
             }
 
             return (first, second, third, fourth);
@@ -54,24 +48,18 @@ namespace Lab3
         public int Task3(int n)
         {
             // طباعة أول n تقييمات
-            if (n > 0 && n <= grades.Length)
+            for (int i = 0; i < n && i < grades.Length; i++)
             {
-                for (int i = 0; i < n; i++)
-                {
-                    Console.WriteLine(grades[i]);
-                }
+                Console.WriteLine(grades[i]);
             }
 
-            // حساب عدد القيم أكبر من 25 من القائمة الأولى (وليس التقييمات)
+            // حساب عدد القيم أكبر من 25 من القائمة الأولى
             int count = 0;
-            if (n > 0 && n <= values.Length)
+            for (int i = 0; i < n && i < values.Length; i++)
             {
-                for (int i = 0; i < n; i++)
+                if (values[i] > 25)
                 {
-                    if (values[i] > 25)
-                    {
-                        count++;
-                    }
+                    count++;
                 }
             }
             return count;
@@ -79,39 +67,22 @@ namespace Lab3
 
         public (int tasks, int serias) Task4(int time, int tasks)
         {
-            // طباعة أول n دقائق
-            if (tasks > 0 && tasks <= minutes.Length)
+            // طباعة أول n دقائق (n = tasks)
+            for (int i = 0; i < tasks && i < minutes.Length; i++)
             {
-                for (int i = 0; i < tasks; i++)
-                {
-                    Console.WriteLine(minutes[i]);
-                }
+                Console.WriteLine(minutes[i]);
             }
 
-            // حساب المهام والسلاسل المكتملة
-            int serias = 0;
-            int completedTasks = 0;
-            int remainingTime = time;
-            
-            while (remainingTime >= 60 && completedTasks < tasks)
-            {
-                completedTasks++;
-                remainingTime -= 60;
-                serias++;
-                
-                // استراحة بعد كل 4 سلاسل
-                if (serias % 4 == 0 && remainingTime >= 10)
-                {
-                    remainingTime -= 10;
-                }
-            }
+            // منطق مبسط جداً
+            int maxTasks = time / 60;
+            int completedTasks = Math.Min(maxTasks, tasks);
+            int serias = completedTasks;
             
             return (completedTasks, serias);
         }
 
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
-            // التعديل على السمات حسب الرقم
             switch (number)
             {
                 case 0:
