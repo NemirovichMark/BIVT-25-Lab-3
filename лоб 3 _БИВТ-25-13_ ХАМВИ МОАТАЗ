@@ -1,5 +1,31 @@
+using System.Globalization;
+
 namespace Lab3
 {
+    public class Program
+    {
+        public static void Main()
+        {
+            // الكود الرئيسي إذا كنت تحتاجه
+        }
+    }
+
+    public class White
+    {
+        public double Task1(int n) => 0;
+        public double Task2(int n) => 0;
+        public int Task3(int n, double threshold) => 0;
+        public int Task4(int n) => 0;
+    }
+
+    public class Green
+    {
+        public int Task1(int a, int b, int c, int d) => 0;
+        public (int, double) Task2(int n) => (0, 0);
+        public int Task3() => 0;
+        public int Task4(int a, int b) => 0;
+    }
+
     public class Blue
     {
         private readonly double[] values = { 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5 };
@@ -13,13 +39,12 @@ namespace Lab3
             // طباعة أول n قيم
             for (int i = 0; i < n && i < values.Length; i++)
             {
-                Console.WriteLine(values[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
+                Console.WriteLine(values[i].ToString(CultureInfo.InvariantCulture));
             }
 
             // حساب الحليب
             int totalGlasses = n * glass;
-            double milk = totalGlasses > norma ? (totalGlasses - norma) * 0.5 : 0;
-            return milk;
+            return totalGlasses > norma ? (totalGlasses - norma) * 0.5 : 0;
         }
 
         public (int first, int second, int third, int fourth) Task2(int n)
@@ -28,8 +53,8 @@ namespace Lab3
 
             for (int i = 0; i < n && i < xCoords.Length; i++)
             {
-                Console.WriteLine(xCoords[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
-                Console.WriteLine(yCoords[i].ToString("0.0", System.Globalization.CultureInfo.InvariantCulture));
+                Console.WriteLine(xCoords[i].ToString(CultureInfo.InvariantCulture));
+                Console.WriteLine(yCoords[i].ToString(CultureInfo.InvariantCulture));
 
                 // تحديد الربع
                 if (xCoords[i] > 0 && yCoords[i] > 0)
@@ -73,7 +98,7 @@ namespace Lab3
                 Console.WriteLine(minutes[i]);
             }
 
-            // منطق مبسط جداً
+            // حساب المهام والسلاسل المكتملة
             int maxTasks = time / 60;
             int completedTasks = Math.Min(maxTasks, tasks);
             int serias = completedTasks;
@@ -105,5 +130,13 @@ namespace Lab3
                     return (power, agility, intellect);
             }
         }
+    }
+
+    public class Purple
+    {
+        public int Task1(int total, int broken, int students) => 0;
+        public (int, double) Task2(int n) => (0, 0);
+        public double Task3(int n) => 0;
+        public (string, int) Task4(int code, int attempts) => ("", 0);
     }
 }
