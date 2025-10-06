@@ -19,22 +19,25 @@ namespace Lab3
         }
 
         public (int first, int second, int third, int fourth) Task2(int n)
-        {
-            int first = 0, second = 0, third = 0, fourth = 0;
+{
+    int first = 0, second = 0, third = 0, fourth = 0;
 
-            for (int i = 0; i < n * 2 && i + 1 < task2Values.Count; i += 2)
-            {
-                double x = task2Values[i];
-                double y = task2Values[i + 1];
+    for (int i = 0; i < n * 2 && i + 1 < task2Values.Count; i += 2)
+    {
+        double x = task2Values[i];
+        double y = task2Values[i + 1];
 
-                if (x > 0 && y > 0) first++;
-                else if (x < 0 && y > 0) second++;
-                else if (x < 0 && y < 0) third++;
-                else if (x > 0 && y < 0) fourth++;
-            }
+        if (x == 0 || y == 0)
+            continue; // точки на осях не считаем
 
-            return (first, second, third, fourth);
-        }
+        if (x > 0 && y > 0) first++;
+        else if (x < 0 && y > 0) second++;
+        else if (x < 0 && y < 0) third++;
+        else if (x > 0 && y < 0) fourth++;
+    }
+
+    return (first, second, third, fourth);
+}
 
         public int Task3(int n)
         {
