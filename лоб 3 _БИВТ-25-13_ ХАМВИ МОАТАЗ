@@ -1,70 +1,36 @@
-using System.Globalization;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Lab3
 {
-    public class Program
-    {
-        public static void Main()
-        {
-            // الكود الرئيسي إذا كنت تحتاجه
-        }
-    }
-
-    public class White
-    {
-        public double Task1(int n) => 0;
-        public double Task2(int n) => 0;
-        public int Task3(int n, double threshold) => 0;
-        public int Task4(int n) => 0;
-    }
-
-    public class Green
-    {
-        public int Task1(int a, int b, int c, int d) => 0;
-        public (int, double) Task2(int n) => (0, 0);
-        public int Task3() => 0;
-        public int Task4(int a, int b) => 0;
-    }
-
     public class Blue
     {
-        private readonly double[] values = { 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5 };
-        private readonly double[] xCoords = { 1.2, 1.7, 0, 0, 4.5, 0, -1, 1.5, -0.5, -0.5 };
-        private readonly double[] yCoords = { 0.2, 0.7, 2, 0, 0.5, 0.5, -1, 1.5, 0.5, 0.1 };
-        private readonly int[] grades = { 3, 4, 2, 2, 5, 4, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 2, 5, 4, 3, 3, 4, 5, 2, 2, 3, 4, 5, 5, 4, 3, 4, 4, 5, 4, 5, 3, 4 };
-        private readonly int[] minutes = { 125, 120, 125, 115, 117, 121, 122, 120, 120, 117, 126, 135, 130, 132, 133 };
+        private List<double> task1Values = new() { 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5 };
+        private List<double> task2Values = new() { 1.2, 1.7, 0, 0, 4.5, 0, -1, 1.5, -0.5, -0.5, 0.2, 0.7, 2, 0, 0.5, 0.5, -1, 1.5, 0.5, 0.1 };
+        private List<int> task3Values = new() { 3, 4, 2, 2, 5, 4, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 2, 5, 4, 3, 3, 4, 5, 2, 2, 3, 4, 5, 5, 4, 3, 4, 4, 5, 4, 5, 3, 4 };
+        private List<int> task4Values = new() { 125, 120, 125, 115, 117, 121, 122, 120, 120, 117, 126, 135, 130, 132, 133 };
 
         public double Task1(int n, int glass, int norma)
         {
-            // طباعة أول n قيم
-            for (int i = 0; i < n && i < values.Length; i++)
-            {
-                Console.WriteLine(values[i].ToString(CultureInfo.InvariantCulture));
-            }
-
-            // حساب الحليب
-            int totalGlasses = n * glass;
-            return totalGlasses > norma ? (totalGlasses - norma) * 0.5 : 0;
+            double milk = 0;
+            milk = n * 0.12;
+            return milk;
         }
 
         public (int first, int second, int third, int fourth) Task2(int n)
         {
             int first = 0, second = 0, third = 0, fourth = 0;
 
-            for (int i = 0; i < n && i < xCoords.Length; i++)
+            for (int i = 0; i < n * 2 && i + 1 < task2Values.Count; i += 2)
             {
-                Console.WriteLine(xCoords[i].ToString(CultureInfo.InvariantCulture));
-                Console.WriteLine(yCoords[i].ToString(CultureInfo.InvariantCulture));
+                double x = task2Values[i];
+                double y = task2Values[i + 1];
 
-                // تحديد الربع
-                if (xCoords[i] > 0 && yCoords[i] > 0)
-                    first++;
-                else if (xCoords[i] < 0 && yCoords[i] > 0)
-                    second++;
-                else if (xCoords[i] < 0 && yCoords[i] < 0)
-                    third++;
-                else if (xCoords[i] > 0 && yCoords[i] < 0)
-                    fourth++;
+                if (x > 0 && y > 0) first++;
+                else if (x < 0 && y > 0) second++;
+                else if (x < 0 && y < 0) third++;
+                else if (x > 0 && y < 0) fourth++;
             }
 
             return (first, second, third, fourth);
@@ -72,71 +38,42 @@ namespace Lab3
 
         public int Task3(int n)
         {
-            // طباعة أول n تقييمات
-            for (int i = 0; i < n && i < grades.Length; i++)
-            {
-                Console.WriteLine(grades[i]);
-            }
-
-            // حساب عدد القيم أكبر من 25 من القائمة الأولى
-            int count = 0;
-            for (int i = 0; i < n && i < values.Length; i++)
-            {
-                if (values[i] > 25)
-                {
-                    count++;
-                }
-            }
+            int count = task3Values.Take(n).Count(x => x == 5);
             return count;
         }
 
         public (int tasks, int serias) Task4(int time, int tasks)
         {
-            // طباعة أول n دقائق (n = tasks)
-            for (int i = 0; i < tasks && i < minutes.Length; i++)
+            int serias = 0;
+
+            if (time > 0)
             {
-                Console.WriteLine(minutes[i]);
+                serias = time / 100;
+            }
+            else if (tasks > 0)
+            {
+                tasks = 12;
+                serias = 0;
+            }
+            else
+            {
+                serias = 12;
             }
 
-            // حساب المهام والسلاسل المكتملة
-            int maxTasks = time / 60;
-            int completedTasks = Math.Min(maxTasks, tasks);
-            int serias = completedTasks;
-            
-            return (completedTasks, serias);
+            return (tasks, serias);
         }
 
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
+            // предположим, что каждое число добавляет +1 к характеристике по номеру
             switch (number)
             {
-                case 0:
-                    return (power + 1, agility + 1, intellect);
-                case 1:
-                    return (power, agility + 6, intellect);
-                case 2:
-                    return (power + 11, agility + 1, intellect);
-                case 3:
-                    return (power + 10, agility, intellect);
-                case 5:
-                    return (power, agility, intellect + 10);
-                case 10:
-                    return (power + 10, agility + 5, intellect + 5);
-                case 12:
-                    return (power + 10, agility + 2, intellect + 5);
-                case 25:
-                    return (power + 15, agility + 15, intellect + 15);
-                default:
-                    return (power, agility, intellect);
+                case 1: power++; break;
+                case 2: agility++; break;
+                case 3: intellect++; break;
             }
-        }
-    }
 
-    public class Purple
-    {
-        public int Task1(int total, int broken, int students) => 0;
-        public (int, double) Task2(int n) => (0, 0);
-        public double Task3(int n) => 0;
-        public (string, int) Task4(int code, int attempts) => ("", 0);
+            return (power, agility, intellect);
+        }
     }
 }
