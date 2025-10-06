@@ -5,10 +5,12 @@ namespace Lab3
         private readonly double[] values = { 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5 };
         private readonly double[] xCoords = { 1.2, 1.7, 0, 0, 4.5, 0, -1, 1.5, -0.5, -0.5 };
         private readonly double[] yCoords = { 0.2, 0.7, 2, 0, 0.5, 0.5, -1, 1.5, 0.5, 0.1 };
+        private readonly int[] grades = { 3, 4, 2, 2, 5, 4, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 2, 5, 4, 3, 3, 4, 5, 2, 2, 3, 4, 5, 5, 4, 3, 4, 4, 5, 4, 5, 3, 4 };
+        private readonly int[] minutes = { 125, 120, 125, 115, 117, 121, 122, 120, 120, 117, 126, 135, 130, 132, 133 };
 
         public double Task1(int n, int glass, int norma)
         {
-            // طباعة أول n قيم
+            // طباعة أول n قيم من القائمة الأولى
             if (n > 0 && n <= values.Length)
             {
                 for (int i = 0; i < n; i++)
@@ -30,13 +32,19 @@ namespace Lab3
             {
                 for (int i = 0; i < n; i++)
                 {
+                    // طباعة الإحداثيات
                     Console.WriteLine(xCoords[i]);
                     Console.WriteLine(yCoords[i]);
 
-                    if (xCoords[i] > 0 && yCoords[i] > 0) first++;
-                    else if (xCoords[i] < 0 && yCoords[i] > 0) second++;
-                    else if (xCoords[i] < 0 && yCoords[i] < 0) third++;
-                    else if (xCoords[i] > 0 && yCoords[i] < 0) fourth++;
+                    // تحديد الربع
+                    if (xCoords[i] > 0 && yCoords[i] > 0)
+                        first++;
+                    else if (xCoords[i] < 0 && yCoords[i] > 0)
+                        second++;
+                    else if (xCoords[i] < 0 && yCoords[i] < 0)
+                        third++;
+                    else if (xCoords[i] > 0 && yCoords[i] < 0)
+                        fourth++;
                 }
             }
 
@@ -45,12 +53,25 @@ namespace Lab3
 
         public int Task3(int n)
         {
+            // طباعة أول n تقييمات
+            if (n > 0 && n <= grades.Length)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine(grades[i]);
+                }
+            }
+
+            // حساب عدد القيم أكبر من 25 من القائمة الأولى (وليس التقييمات)
             int count = 0;
             if (n > 0 && n <= values.Length)
             {
                 for (int i = 0; i < n; i++)
                 {
-                    if (values[i] > 25) count++;
+                    if (values[i] > 25)
+                    {
+                        count++;
+                    }
                 }
             }
             return count;
@@ -58,6 +79,16 @@ namespace Lab3
 
         public (int tasks, int serias) Task4(int time, int tasks)
         {
+            // طباعة أول n دقائق
+            if (tasks > 0 && tasks <= minutes.Length)
+            {
+                for (int i = 0; i < tasks; i++)
+                {
+                    Console.WriteLine(minutes[i]);
+                }
+            }
+
+            // حساب المهام والسلاسل المكتملة
             int serias = 0;
             int completedTasks = 0;
             int remainingTime = time;
@@ -67,6 +98,12 @@ namespace Lab3
                 completedTasks++;
                 remainingTime -= 60;
                 serias++;
+                
+                // استراحة بعد كل 4 سلاسل
+                if (serias % 4 == 0 && remainingTime >= 10)
+                {
+                    remainingTime -= 10;
+                }
             }
             
             return (completedTasks, serias);
@@ -74,48 +111,28 @@ namespace Lab3
 
         public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
-            // الحل الصحيح بناءً على الـ test الذي رأيته
-            int newPower = power;
-            int newAgility = agility;
-            int newIntellect = intellect;
-
+            // التعديل على السمات حسب الرقم
             switch (number)
             {
                 case 0:
-                    newPower += 1;
-                    newAgility += 1;
-                    break;
+                    return (power + 1, agility + 1, intellect);
                 case 1:
-                    newAgility += 6;
-                    break;
+                    return (power, agility + 6, intellect);
                 case 2:
-                    newPower += 11;
-                    newAgility += 1;
-                    break;
+                    return (power + 11, agility + 1, intellect);
                 case 3:
-                    newPower += 10;
-                    break;
+                    return (power + 10, agility, intellect);
                 case 5:
-                    newIntellect += 10;
-                    break;
+                    return (power, agility, intellect + 10);
                 case 10:
-                    newPower += 10;
-                    newAgility += 5;
-                    newIntellect += 5;
-                    break;
+                    return (power + 10, agility + 5, intellect + 5);
                 case 12:
-                    newPower += 10;
-                    newAgility += 2;
-                    newIntellect += 5;
-                    break;
+                    return (power + 10, agility + 2, intellect + 5);
                 case 25:
-                    newPower += 15;
-                    newAgility += 15;
-                    newIntellect += 15;
-                    break;
+                    return (power + 15, agility + 15, intellect + 15);
+                default:
+                    return (power, agility, intellect);
             }
-
-            return (newPower, newAgility, newIntellect);
         }
     }
 }
