@@ -139,10 +139,11 @@ namespace Lab3
 
             
             // end
-            return (power, agility, intellect);
+            return (newPower, newAgility, newIntellect);
         }
     }
 }
+
 
 
 
