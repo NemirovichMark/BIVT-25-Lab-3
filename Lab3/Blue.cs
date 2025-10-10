@@ -1,55 +1,141 @@
-﻿namespace Lab3
+namespace Lab3
 {
-    public class Blue
+    public static double Task1(int n, int glass, int norma)
     {
-        public double Task1(int n, int glass, int norma)
+        double answer = 0;
+        // code here
+        for (int i = 0; i < n; i++)
         {
-            double milk = 0;
-
-            // code here
-
-            // end
-
-            return milk;
+            Console.Write($"Введите вес ученика {i + 1}: ");
+            int weight = int.Parse(Console.ReadLine());
+            if (weight < norma)
+            {
+                answer += glass;
+            }
         }
-        public (int first, int second, int third, int fourth) Task2(int n)
+        answer = answer / 1000; // перевод мл в литры
+                                // end
+        return answer;
+    }
+    public static string Task2(int n)
+    {
+        string answer = "";
+        // code here
+        int count1 = 0, count2 = 0, count3 = 0, count4 = 0;
+
+        for (int i = 0; i < n; i++)
         {
-            int first = 0, second = 0, third = 0, fourth = 0;
+            Console.Write($"Введите координату X точки {i + 1}: ");
+            double x = double.Parse(Console.ReadLine());
+            Console.Write($"Введите координату Y точки {i + 1}: ");
+            double y = double.Parse(Console.ReadLine());
 
-            // code here
-
-            // end
-
-            return (first, second, third, fourth);
+            if (x > 0 && y > 0)
+                count1++;
+            else if (x < 0 && y > 0)
+                count2++;
+            else if (x < 0 && y < 0)
+                count3++;
+            else if (x > 0 && y < 0)
+                count4++;
         }
-        public int Task3(int n)
+
+        answer = $"{count1} {count2} {count3} {count4}";
+        // end
+        return answer;
+    }
+    public static int Task3(int n)
+    {
+        int answer = 0;
+        // code here
+        for (int i = 0; i < n; i++)
         {
-            int count = 0;
+            Console.WriteLine($"Введите 4 оценки студента {i + 1}:");
+            bool hasBadGrades = false;
 
-            // code here
+            for (int j = 0; j < 4; j++)
+            {
+                int grade = int.Parse(Console.ReadLine());
+                if (grade == 2 || grade == 3)
+                {
+                    hasBadGrades = true;
+                }
+            }
 
-            // end
-
-            return count;
+            if (!hasBadGrades)
+            {
+                answer++;
+            }
         }
-        public (int tasks, int serias) Task4(int time, int tasks)
+        // end
+        return answer;
+    }
+    public static string TASK1(int time, int tasks)
+    {
+        string answer = "";
+        // code here
+        int seriasTime, taskTime = 10, serias = 0;
+
+        while (time < 1440 && tasks > 0) // 24:00 = 1440 минут
         {
-            int serias = 0;
-
-            // code here
-
-            // end
-
-            return (tasks, serias);
+            time += taskTime;
+            taskTime += 5;
+            tasks--;
         }
-        public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
+
+        while (time < 1440)
         {
-
-            // code here
-
-            // end
-
-            return (power, agility, intellect);
+            Console.Write("Введите seriasTime: ");
+            seriasTime = int.Parse(Console.ReadLine());
+            time += seriasTime;
+            serias++;
         }
+
+        answer = $"{tasks} {serias}";
+        // end
+        return answer;
+    }
+    public static string Task5(int power, int agility, int intellect, int number)
+    {
+        string answer = "";
+        // code here
+        int newPower = power;
+        int newAgility = agility;
+        int newIntellect = intellect;
+
+        // Применяем бонусы
+        switch (number)
+        {
+            case 1:
+                newPower += 10;    // увеличиваем силу на 10
+                newIntellect -= 5; // понижаем интеллект на 5
+                break;
+            case 2:
+                newAgility += 5;   // увеличиваем ловкость на 5
+                newPower -= 5;     // понижаем силу на 5
+                break;
+            case 3:
+                newPower += 10;    // увеличиваем силу на 10
+                newIntellect -= 5; // понижаем интеллект на 5
+                break;
+            case 4:
+                newAgility += 15;  // увеличиваем ловкость на 15
+                newPower -= 10;    // понижаем силу на 10
+                newIntellect -= 10; // понижаем интеллект на 10
+                break;
+            case 5:
+                newIntellect += 7; // увеличиваем интеллект на 7
+                newPower -= 5;     // понижаем силу на 5
+                break;
+        }
+
+        // Проверка на минимальное значение 0
+        if (newPower < 0) newPower = 0;
+        if (newAgility < 0) newAgility = 0;
+        if (newIntellect < 0) newIntellect = 0;
+
+        answer = $"{newPower} {newAgility} {newIntellect}";
+        // end
+        return answer;
     }
 }
