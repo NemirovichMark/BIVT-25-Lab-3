@@ -116,6 +116,7 @@ namespace Lab3
                 case 2:
                     newAgility += 5;   // увеличиваем ловкость на 5
                     newPower -= 5;     // понижаем силу на 5
+                    newIntellect-=5;
                     break;
                 case 3:
                     newPower += 10;    // увеличиваем силу на 10
@@ -143,6 +144,7 @@ namespace Lab3
         }
     }
 }
+
 
 
 
