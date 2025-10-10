@@ -80,9 +80,9 @@ namespace Lab3
             // end
             return answer;
         }
-        public string Task5(int power, int agility, int intellect, int number)
+        public (int power, int agility, int intellect) Task5(int power, int agility, int intellect, int number)
         {
-            string answer = "";
+            
             // code here
             int newPower = power;
             int newAgility = agility;
@@ -119,10 +119,12 @@ namespace Lab3
             if (newAgility < 0) newAgility = 0;
             if (newIntellect < 0) newIntellect = 0;
 
-            answer = $"{newPower} {newAgility} {newIntellect}";
+            
             // end
-            return answer;
+            return (power, agility, intellect);
         }
     }
 }
+}
+
 
