@@ -72,11 +72,29 @@ namespace Lab3
             // end
             return answer;
         }
-        public string Task4(int time, int tasks)
+        public static string Task4(int time, int tasks)
         {
             string answer = "";
             // code here
-            // Здесь должна быть реализация согласно схеме из условия
+
+            int seriasTime, taskTime = 10, serias = 0;
+
+            while (time < 1440 && tasks > 0) // 24:00 = 1440 минут
+            {
+                time += taskTime;
+                taskTime += 5;
+                tasks--;
+            }
+
+            while (time < 1440)
+            {
+                Console.Write("Введите seriasTime: ");
+                seriasTime = int.Parse(Console.ReadLine());
+                time += seriasTime;
+                serias++;
+            }
+
+            answer = $"{tasks} {serias}";
             // end
             return answer;
         }
@@ -125,6 +143,7 @@ namespace Lab3
         }
     }
 }
-}
+
+
 
 
