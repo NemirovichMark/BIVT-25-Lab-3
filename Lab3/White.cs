@@ -68,7 +68,7 @@ namespace Lab3
             int hours = 0;
 
             // code here
-            double amount = 0
+            double amount = 0;
             amount = double.Parse(Console.ReadLine());
 
             while (amount < maxAmount)
@@ -113,3 +113,4 @@ namespace Lab3
         }
     }
 }
+
