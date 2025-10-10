@@ -1,6 +1,6 @@
 namespace Lab3
 {
-    public static double Task1(int n, int glass, int norma)
+    public  double Task1(int n, int glass, int norma)
     {
         double answer = 0;
         // code here
@@ -17,7 +17,7 @@ namespace Lab3
                                 // end
         return answer;
     }
-    public static string Task2(int n)
+    public  string Task2(int n)
     {
         string answer = "";
         // code here
@@ -44,7 +44,7 @@ namespace Lab3
         // end
         return answer;
     }
-    public static int Task3(int n)
+    public  int Task3(int n)
     {
         int answer = 0;
         // code here
@@ -70,7 +70,7 @@ namespace Lab3
         // end
         return answer;
     }
-    public static string Task4(int time, int tasks)
+    public  string Task4(int time, int tasks)
     {
         string answer = "";
         // code here
@@ -78,7 +78,7 @@ namespace Lab3
         // end
         return answer;
     }
-    public static string Task5(int power, int agility, int intellect, int number)
+    public  string Task5(int power, int agility, int intellect, int number)
     {
         string answer = "";
         // code here
@@ -122,3 +122,4 @@ namespace Lab3
         return answer;
     }
 }
+
